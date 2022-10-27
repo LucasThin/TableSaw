@@ -16,8 +16,7 @@ using UnityEngine;
 /// </remarks>
 public class SpatialAnchorLoader : MonoBehaviour
 {
-    [SerializeField]
-    OVRSpatialAnchor _anchorPrefab;
+    [SerializeField] OVRSpatialAnchor _anchorPrefab;
 
     Action<OVRSpatialAnchor.UnboundAnchor, bool> _onLoadAnchor;
 
