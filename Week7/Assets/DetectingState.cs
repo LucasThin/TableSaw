@@ -2,76 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum movingState
+{
+    moving = 0,
+    idle = 1,
+    rest = 2,
+    lift = 3,
+    carrying = 4
+}
+
 public class DetectingState : MonoBehaviour
 {
+    public movingState state;
+    Vector3 lastPos;
+    Vector3 currentPos;
+    float _time = 0;
 
-    public string movingState;
-    public GameObject idelTrigger;
-    public GameObject movingTrigger;
-    public GameObject liftingTrigger;
-    public GameObject carrtyingTrigger;
-
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        idelTrigger.SetActive(false);
-        movingTrigger.SetActive(false);
-        liftingTrigger.SetActive(false);
-        carrtyingTrigger.SetActive(false);
+        lastPos = transform.position;
+        state = movingState.idle;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (movingState == "break")
-        {
-            idelTrigger.SetActive(false);
-            movingTrigger.SetActive(false);
-            liftingTrigger.SetActive(false);
-            carrtyingTrigger.SetActive(false);
+        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
 
-            Debug.Log("break state");
+        currentPos = transform.position;
+        float distance = Vector3.Distance(lastPos, currentPos);
+
+
+        if (distance > 0.4)
+        {
+            state = movingState.moving;
+            Debug.Log("Moving state");
         }
-
-        else if (movingState == "idle")
+        else if (_time > 2f)
         {
-            idelTrigger.SetActive(true);
-            movingTrigger.SetActive(false);
-            liftingTrigger.SetActive(false);
-            carrtyingTrigger.SetActive(false);
-
+            state = movingState.idle;
             Debug.Log("idle state");
+            _time = 0;
         }
-
-        else if (movingState == "moving")
+        else if (_time < 2f)
         {
-            idelTrigger.SetActive(false);
-            movingTrigger.SetActive(true);
-            liftingTrigger.SetActive(false);
-            carrtyingTrigger.SetActive(false);
-
-            Debug.Log("moving state");
+            _time += Time.deltaTime;
         }
 
-        else if (movingState == "lifting")
-        {
-            idelTrigger.SetActive(false);
-            movingTrigger.SetActive(false);
-            liftingTrigger.SetActive(true);
-            carrtyingTrigger.SetActive(false);
-
-            Debug.Log("lifting state");
-        }
-
-        else if (movingState == "carrying")
-        {
-            idelTrigger.SetActive(false);
-            movingTrigger.SetActive(false);
-            liftingTrigger.SetActive(false);
-            carrtyingTrigger.SetActive(true);
-
-            Debug.Log("carrying state");
-        }
+        lastPos = currentPos;
     }
 }
