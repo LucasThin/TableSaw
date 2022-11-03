@@ -19,30 +19,30 @@ public class ChangeTextures : MonoBehaviour
     public void ChangeToBlue()
     {
         Debug.Log("change to blue");
-        m_Renderer.sharedMaterial = green;
+        m_Renderer.sharedMaterial = blue;
     }
     
     public void ChangeToRed()
     {
-        Debug.Log("change to blue");
+        Debug.Log("change to red");
         m_Renderer.sharedMaterial = red;
     }
     
     public void ChangeToGray()
     {
-        Debug.Log("change to blue");
+        Debug.Log("change to gray");
         m_Renderer.sharedMaterial = gray;
     }
     
     public void ChangeToGreen()
     {
-        Debug.Log("change to blue");
+        Debug.Log("change to green");
         m_Renderer.sharedMaterial = green;
     }
     
     public void ChangeToOrange()
     {
-        Debug.Log("change to blue");
+        Debug.Log("change to orange");
         m_Renderer.sharedMaterial = orange;
     }
 }
