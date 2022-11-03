@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oculus/SampleFramework/Usage/SpatialAnchor.unity
     guid: 1db179c458352bf46beb307fd047d589
-  - enabled: 1
-    path: Assets/Scenes/SpatialAnchorTrigger.unity
-    guid: bae574ceee56cd443ab51434db472394
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f3d36b094c7e90a48bfeecc8253553a0,
       type: 2}
