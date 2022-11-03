@@ -14,9 +14,10 @@ public enum movingState
 public class DetectingState : MonoBehaviour
 {
     public movingState state;
-    Vector3 lastPos;
-    Vector3 currentPos;
+    private Vector3 lastPos;
+    private Vector3 currentPos;
     public GameObject _camera;
+    private bool ifCarry = false;
     float _time = 0;
 
     void Awake()
@@ -25,30 +26,53 @@ public class DetectingState : MonoBehaviour
         state = movingState.idle;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         transform.position = new Vector3(_camera.transform.position.x, 0f, _camera.transform.position.z);
 
         currentPos = transform.position;
         float distance = Vector3.Distance(lastPos, currentPos);
 
+        //Debug.Log(ifCarry);
 
-        if (distance > 0.1)
+        if (distance > 0.01 && ifCarry == false)
         {
             state = movingState.moving;
             Debug.Log("Moving state");
         }
-        else if (_time > 2f)
+        else if (distance > 0.01 && ifCarry == true)
+        {
+            state = movingState.carrying;
+            Debug.Log("Carrying state");
+        }
+        else if (_time > 1f && ifCarry == false)
         {
             state = movingState.idle;
             Debug.Log("idle state");
             _time = 0;
         }
-        else if (_time < 2f)
+        else if (_time > 1f && ifCarry == true)
+        {
+            state = movingState.lift;
+            Debug.Log("lift state");
+            _time = 0;
+        }
+        else if (_time < 1f)
         {
             _time += Time.deltaTime;
         }
 
         lastPos = currentPos;
+    }
+
+    public void Carrying()
+    {
+        ifCarry = true;
+        Debug.Log("Blocked");
+    }
+
+    public void NoCarry()
+    {
+        ifCarry = false;
     }
 }
