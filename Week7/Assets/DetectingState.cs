@@ -16,6 +16,7 @@ public class DetectingState : MonoBehaviour
     public movingState state;
     Vector3 lastPos;
     Vector3 currentPos;
+    public GameObject _camera;
     float _time = 0;
 
     void Awake()
@@ -26,13 +27,13 @@ public class DetectingState : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+        transform.position = new Vector3(_camera.transform.position.x, 0f, _camera.transform.position.z);
 
         currentPos = transform.position;
         float distance = Vector3.Distance(lastPos, currentPos);
 
 
-        if (distance > 0.4)
+        if (distance > 0.1)
         {
             state = movingState.moving;
             Debug.Log("Moving state");
