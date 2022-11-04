@@ -909,11 +909,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367802221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.688, y: 0.317, z: 1.45}
-  m_LocalScale: {x: 0.86463, y: 0.60788834, z: 0.59705}
+  m_LocalPosition: {x: 0, y: 0.23300001, z: 0.26194572}
+  m_LocalScale: {x: 0.86463, y: 0.6078884, z: 0.5970501}
   m_Children: []
-  m_Father: {fileID: 543450652681978918}
-  m_RootOrder: 9
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &367802223
 BoxCollider:
@@ -1647,7 +1647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &704420028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1697,9 +1697,9 @@ Canvas:
   m_GameObject: {fileID: 704420027}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 316641916}
-  m_PlaneDistance: 0.1
+  m_PlaneDistance: 0.25
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1707,7 +1707,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &704420031
 RectTransform:
@@ -6424,7 +6424,6 @@ Transform:
   - {fileID: 8423796472594322769}
   - {fileID: 3424554560337570319}
   - {fileID: 5472622941467490744}
-  - {fileID: 367802222}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
