@@ -3010,7 +3010,6 @@ GameObject:
   - component: {fileID: 402961144}
   - component: {fileID: 402961145}
   - component: {fileID: 402961148}
-  - component: {fileID: 402961152}
   - component: {fileID: 402961149}
   - component: {fileID: 402961150}
   m_Layer: 0
@@ -3076,18 +3075,6 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 25
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1569725085}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3311,18 +3298,6 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &402961152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402961147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1c394f0df14d24bb010318a6e39515, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &435274399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5043,7 @@ MonoBehaviour:
   green: {fileID: 2100000, guid: b561739e1fc3f5045aaebf6a4458ded0, type: 2}
   gray: {fileID: 2100000, guid: e09d4c1197ea99e488befaddb7d0bb45, type: 2}
   orange: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
+  original: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
 --- !u!137 &735639726
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5584,6 +5560,7 @@ MonoBehaviour:
   green: {fileID: 2100000, guid: b561739e1fc3f5045aaebf6a4458ded0, type: 2}
   gray: {fileID: 2100000, guid: e09d4c1197ea99e488befaddb7d0bb45, type: 2}
   orange: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
+  original: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
 --- !u!137 &848465462
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -10079,7 +10056,7 @@ GameObject:
   - component: {fileID: 1486441936}
   - component: {fileID: 1486441938}
   - component: {fileID: 1486441937}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11352,6 +11329,7 @@ MonoBehaviour:
   green: {fileID: 2100000, guid: b561739e1fc3f5045aaebf6a4458ded0, type: 2}
   gray: {fileID: 2100000, guid: e09d4c1197ea99e488befaddb7d0bb45, type: 2}
   orange: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
+  original: {fileID: 2100000, guid: 3433c80be4a72a949b9bfd9ab4d90fe9, type: 2}
 --- !u!137 &1638145681
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -12160,7 +12138,7 @@ GameObject:
   - component: {fileID: 1782460500}
   - component: {fileID: 1782460502}
   - component: {fileID: 1782460501}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28347,6 +28325,7 @@ MonoBehaviour:
   green: {fileID: 2100000, guid: b561739e1fc3f5045aaebf6a4458ded0, type: 2}
   gray: {fileID: 2100000, guid: e09d4c1197ea99e488befaddb7d0bb45, type: 2}
   orange: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
+  original: {fileID: 2100000, guid: 6f6f6876b54129743a0b9606bf5bb4ae, type: 2}
 --- !u!1 &6380008278145057119
 GameObject:
   m_ObjectHideFlags: 0
