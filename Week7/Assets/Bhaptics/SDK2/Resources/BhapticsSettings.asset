@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BhapticsSettings
   m_EditorClassIdentifier: 
   appName: 
-  appId: 
+  appId: 2000wms@gmail.com
   apiKey: 
   lastDeployVersion: -1
   eventData: []
