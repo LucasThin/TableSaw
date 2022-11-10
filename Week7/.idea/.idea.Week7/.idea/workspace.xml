@@ -3,28 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Glossiness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Glossiness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1001_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1002_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1002_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1002_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_1002_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_hair.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Ch17_hair.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeTextures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeTextures.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResponseActions/VibrateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResponseActions/VibrateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToggleUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,6 +77,7 @@
       <workItem from="1666846070803" duration="2477000" />
       <workItem from="1667505355106" duration="2283000" />
       <workItem from="1667508193914" duration="9000" />
+      <workItem from="1668061326864" duration="2834000" />
     </task>
     <servers />
   </component>

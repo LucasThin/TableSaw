@@ -6,6 +6,7 @@ public class ChangeTextures : MonoBehaviour
 {
     public Material red, blue, green, gray, orange;
     private Renderer m_Renderer;
+   
     
     // Start is called before the first frame update
     void Start()
