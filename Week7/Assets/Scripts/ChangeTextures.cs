@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ChangeTextures : MonoBehaviour
 {
-    public Material red, blue, green, gray, orange;
+    public Material red, blue, green, gray, orange, original;
     private Renderer m_Renderer;
+   
     
     // Start is called before the first frame update
     void Start()
     {
         m_Renderer = GetComponent<Renderer>();
         m_Renderer.enabled = true;
-        m_Renderer.sharedMaterial = gray;
+        m_Renderer.sharedMaterial = original;
     }
 
     // Update is called once per frame
