@@ -6,44 +6,53 @@ using System.IO.Ports;
 
 public class OnHaptics : MonoBehaviour
 {
-    public MeshRenderer _debugMesh;
-    private SerialPort portNo = new SerialPort("COM6", 9600);
+    //public MeshRenderer _debugMesh;
+    public string message2;
+    public SerialPort portNo = new SerialPort("COM6", 9600);
     void Start()
     {
-        portNo.Open();
-        portNo.ReadTimeout = 5000;
+        OpenConnection();
+    }
+
+    private void OpenConnection()
+    {
+        if (portNo != null)
+        {
+            if (portNo.IsOpen)
+            {
+                portNo.Close();
+                print("Closing port, because it was already open!");
+            }
+            else
+            {
+                portNo.Open();
+                portNo.ReadTimeout = 16;
+                print("Port Opened!");
+            }
+        }
+        else
+        {
+            if (portNo.IsOpen)
+            {
+                print("Port is already open");
+            }
+            else
+            {
+                print("Port == null");
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!portNo.IsOpen)
-            portNo.Open();
-        if (portNo.IsOpen)
-        {
-            try
-            {
-                Debug.Log(portNo.ReadByte());
-                OnHaptic(portNo.ReadByte());
-            }
-            catch (System.Exception)
-            {
-                throw;
-            }
-        }
+        // message2 = portNo.ReadLine();
+       // print(message2);
     }
 
-    void OnHaptic(int stat)
+    public void SendHaptic()
     {
-        if (stat == 1)
-        {
-            _debugMesh.enabled = true;
-           // Debug.Log("1");
-        }
-        else if (stat == 2)
-        {
-            _debugMesh.enabled = false;
-          //  Debug.Log("2");
-        }
+        Debug.Log("SendHaptic");
+        portNo.Write("Y");
     }
 }

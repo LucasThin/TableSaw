@@ -14,6 +14,9 @@ public class OnTrigger : MonoBehaviour
 
     // When the object enters a collision
     public TriggerEvent OnEnter = new TriggerEvent();
+    
+    //When the object stays in a collision
+    public TriggerEvent OnStay = new TriggerEvent();
 
     // When the object exits a collision
     public TriggerEvent OnExit = new TriggerEvent();
@@ -22,6 +25,12 @@ public class OnTrigger : MonoBehaviour
     {
         if (CanTrigger(other.gameObject))
             OnEnter?.Invoke(other);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (CanTrigger(other.gameObject))
+            OnStay?.Invoke(other);
     }
 
     private void OnTriggerExit(Collider other)

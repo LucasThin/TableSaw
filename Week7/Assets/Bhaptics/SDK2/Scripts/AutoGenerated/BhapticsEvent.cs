@@ -16,5 +16,9 @@ namespace Bhaptics.SDK2
     
     public class BhapticsEvent
     {
+        
+        public const string SENSEBACK = "senseback";
+        
+        public const string SOCIAL = "social";
     }
 }
