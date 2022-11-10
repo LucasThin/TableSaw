@@ -11007,7 +11007,13 @@ MonoBehaviour:
   _back: {fileID: 0}
   _left: {fileID: 0}
   _right: {fileID: 0}
-  colliding: []
+  haptics:
+  - {fileID: 1929175071}
+  - {fileID: 286116473}
+  - {fileID: 1459458483}
+  - {fileID: 1774362799}
+  collidingObjects: []
+  distances: []
 --- !u!1 &1947727071
 GameObject:
   m_ObjectHideFlags: 0
