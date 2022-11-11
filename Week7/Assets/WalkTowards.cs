@@ -9,7 +9,7 @@ public class WalkTowards : MonoBehaviour
     [SerializeField] private GameObject backCamera;
     [SerializeField] private GameObject _glow;
     //public VibrateController vibration;
-
+    
     [SerializeField] private XRBaseController controller;
 
 

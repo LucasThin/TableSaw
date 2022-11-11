@@ -13,7 +13,9 @@ public class DetectDitection : MonoBehaviour
     [SerializeField] private List<float> distances = new List<float>();
     private int x = 0;
     
-    [SerializeField] private XRBaseController controller;
+    [SerializeField] private XRBaseController leftController;
+    [SerializeField] private XRBaseController rightController;
+    [SerializeField] private PlayBhaptics _playBhaptics;
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
@@ -75,21 +77,25 @@ public class DetectDitection : MonoBehaviour
         }
         Debug.Log(minDirection);
         
-        //coming from the front
+        //coming from the back
         if (minDirection == 0)
         {
             haptics[0].SetActive(true);
             haptics[1].SetActive(false);
             haptics[2].SetActive(false);
             haptics[3].SetActive(false);
+            _playBhaptics.Haptics(1.0f-0.1f * min, 0.1f*min);
+                
         }
-        //coming from the back
+        //coming from the front
         else if (minDirection == 1)
         {
             haptics[0].SetActive(false);
             haptics[1].SetActive(true);
             haptics[2].SetActive(false);
             haptics[3].SetActive(false);
+            leftController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
         }
         //coming from the left
         else if (minDirection == 2)
@@ -98,7 +104,7 @@ public class DetectDitection : MonoBehaviour
             haptics[1].SetActive(false);
             haptics[2].SetActive(true);
             haptics[3].SetActive(false);
-            controller.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            leftController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
         }
         //coming from the right
         else if (minDirection == 3)
@@ -107,7 +113,7 @@ public class DetectDitection : MonoBehaviour
             haptics[1].SetActive(false);
             haptics[2].SetActive(false);
             haptics[3].SetActive(true);
-            controller.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
         }
     }
 
