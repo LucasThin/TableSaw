@@ -4,7 +4,11 @@
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DetectDitection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DetectDitection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXRbackUp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarehouseXRbackUp.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR/NavMesh.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXRbackUp.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXRbackUp.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +83,7 @@
       <workItem from="1668061326864" duration="3836000" />
       <workItem from="1668086436971" duration="2981000" />
       <workItem from="1668113372713" duration="904000" />
-      <workItem from="1668119942498" duration="9123000" />
+      <workItem from="1668119942498" duration="10070000" />
     </task>
     <servers />
   </component>

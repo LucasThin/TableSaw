@@ -26,7 +26,7 @@ public class DetectDitection : MonoBehaviour
         //If it is not the manager or worker, leave the function
        
         //When gameobject enter the trigger zone , add to array
-        if (other.gameObject.CompareTag("worker") || other.gameObject.CompareTag("manager"))
+        if (other.gameObject.CompareTag("manager"))
         {
             if (!collidingObjects.Contains(other.gameObject))
            {
@@ -40,7 +40,7 @@ public class DetectDitection : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("worker") || other.gameObject.CompareTag("manager"))
+        if (other.gameObject.CompareTag("manager"))
         {
             for(int y = 0; y<haptics.Count; y++)
             {
