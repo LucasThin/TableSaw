@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class DetectDitection : MonoBehaviour
 {
     
-    [SerializeField] private List<Transform> haptics = new List<Transform>();
+    [SerializeField] private List<GameObject> haptics = new List<GameObject>();
     [SerializeField] private List<GameObject> collidingObjects = new List<GameObject>();
     [SerializeField] private List<float> distances = new List<float>();
     private int x = 0;
+    
+    [SerializeField] private XRBaseController controller;
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
@@ -26,13 +29,9 @@ public class DetectDitection : MonoBehaviour
                collidingObjects.Add(other.gameObject);
                CalculateDistance();
            }
-            Debug.Log(other.gameObject.name);
+           Debug.Log(other.gameObject.name);
         }
-        else
-        {
-            return;
-        }
-        
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -44,6 +43,8 @@ public class DetectDitection : MonoBehaviour
                 distances[y] = Vector3.Distance(collidingObjects[x].transform.position, haptics[y].transform.position);
             }
         }
+        
+        FindLowestDistance();
     }
 
     //Calculate the distance between list objects and all 3 haptic game objects. 
@@ -57,6 +58,62 @@ public class DetectDitection : MonoBehaviour
             float distance = Vector3.Distance(collidingObjects[x].transform.position, haptics[x].transform.position);
             distances.Add(distance);
         }
+    }
+
+    private void FindLowestDistance()
+    {
+        var min = Mathf.Infinity;
+        int minDirection = 10;
+ 
+        for (int i = 0; i < distances.Count; i++)
+        {
+            if (distances[i] < min)
+            {
+                min = distances[i];
+                minDirection = i;
+            }
+        }
+        Debug.Log(minDirection);
+        
+        //coming from the front
+        if (minDirection == 0)
+        {
+            haptics[0].SetActive(true);
+            haptics[1].SetActive(false);
+            haptics[2].SetActive(false);
+            haptics[3].SetActive(false);
+        }
+        //coming from the back
+        else if (minDirection == 1)
+        {
+            haptics[0].SetActive(false);
+            haptics[1].SetActive(true);
+            haptics[2].SetActive(false);
+            haptics[3].SetActive(false);
+        }
+        //coming from the left
+        else if (minDirection == 2)
+        {
+            haptics[0].SetActive(false);
+            haptics[1].SetActive(false);
+            haptics[2].SetActive(true);
+            haptics[3].SetActive(false);
+            controller.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+        }
+        //coming from the right
+        else if (minDirection == 3)
+        {
+            haptics[0].SetActive(false);
+            haptics[1].SetActive(false);
+            haptics[2].SetActive(false);
+            haptics[3].SetActive(true);
+            controller.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+        }
+    }
+
+    private void GetGameObjectFromDistance()
+    {
+        
     }
 
 }
