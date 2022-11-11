@@ -12,10 +12,13 @@ public class DetectDitection : MonoBehaviour
     [SerializeField] private List<GameObject> collidingObjects = new List<GameObject>();
     [SerializeField] private List<float> distances = new List<float>();
     private int x = 0;
-    
+
     [SerializeField] private XRBaseController leftController;
     [SerializeField] private XRBaseController rightController;
     [SerializeField] private PlayBhaptics _playBhaptics;
+    
+    [SerializeField] private GameObject backView;
+    private bool _removeList = false;
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
@@ -25,8 +28,7 @@ public class DetectDitection : MonoBehaviour
         //When gameobject enter the trigger zone , add to array
         if (other.gameObject.CompareTag("worker") || other.gameObject.CompareTag("manager"))
         {
-           // collidingObjects.Add(other.gameObject);
-           if (!collidingObjects.Contains(other.gameObject))
+            if (!collidingObjects.Contains(other.gameObject))
            {
                collidingObjects.Add(other.gameObject);
                CalculateDistance();
@@ -84,7 +86,8 @@ public class DetectDitection : MonoBehaviour
             haptics[1].SetActive(false);
             haptics[2].SetActive(false);
             haptics[3].SetActive(false);
-            _playBhaptics.Haptics(1.0f-0.1f * min, 0.1f*min);
+            _playBhaptics.Haptics(10f-0.1f * min, 0.1f*min);
+            backView.SetActive(true);
                 
         }
         //coming from the front
@@ -116,10 +119,31 @@ public class DetectDitection : MonoBehaviour
             rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
         }
     }
-
-    private void GetGameObjectFromDistance()
+    
+    private void OnTriggerExit(Collider other)
     {
-        
+        backView.SetActive(false);
+        if (collidingObjects.Contains(other.gameObject))
+        {
+            collidingObjects.Remove(other.gameObject);
+               
+        }
+
+        _removeList = true;
     }
+
+    private void Update()
+    {
+        if (_removeList)
+        {
+            foreach (var distance in distances)
+            {
+                distances.Remove(distance);
+            }
+
+            _removeList = false;
+        }
+    }
+
 
 }

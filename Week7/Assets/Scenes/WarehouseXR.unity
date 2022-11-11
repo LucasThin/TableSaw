@@ -11083,6 +11083,7 @@ MonoBehaviour:
   leftController: {fileID: 2005234207}
   rightController: {fileID: 891493890}
   _playBhaptics: {fileID: 1936063220}
+  backView: {fileID: 1526210753}
 --- !u!114 &1936063220
 MonoBehaviour:
   m_ObjectHideFlags: 0
