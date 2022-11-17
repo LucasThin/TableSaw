@@ -13,6 +13,14 @@
       },
       "url": "https://package.openupm.com"
     },
+    "com.meta.movement": {
+      "version": "file:C:/Users/lucas/Downloads/Unity-Movement-1.2.2/Unity-Movement-1.2.2",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6"
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
