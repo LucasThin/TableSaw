@@ -109,13 +109,15 @@ public class CalculateDistance : MonoBehaviour
         else if (minDirection == 2)
         {
             Debug.Log("Coming from the left");
+            OVRInput.SetControllerVibration(1.0f - 0.1f * min, 0.1f * min, OVRInput.Controller.LTouch);
           //  leftController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
         }
         //coming from the right
         else if (minDirection == 3)
         {
             Debug.Log("Coming from the right");
-           // rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            OVRInput.SetControllerVibration(1.0f - 0.1f * min, 0.1f * min, OVRInput.Controller.RTouch);
+            // rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
         }
     }
 
