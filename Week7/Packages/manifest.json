@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.atteneder.gltfast": "4.8.5",
+    "com.meta.movement": "file:C:/Users/lucas/Downloads/Unity-Movement-1.2.2/Unity-Movement-1.2.2",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ads": "3.7.5",
