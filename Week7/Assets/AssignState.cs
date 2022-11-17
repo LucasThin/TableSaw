@@ -9,10 +9,6 @@ public class AssignState : MonoBehaviour
     public GameObject movingTrigger;
     public GameObject liftingTrigger;
     public GameObject carryingTrigger;
-    public GameObject idleText;
-    public GameObject movingText;
-    public GameObject liftingText;
-    public GameObject carryingText;
 
 
     // Start is called before the first frame update
@@ -22,31 +18,11 @@ public class AssignState : MonoBehaviour
         movingTrigger.SetActive(false);
         liftingTrigger.SetActive(false);
         carryingTrigger.SetActive(false);
-
-        idleText.SetActive(false);
-        movingText.SetActive(false);
-        liftingText.SetActive(false);
-        carryingText.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //if (detectingState.state == movingState.rest)
-        //{
-        //    idleTrigger.SetActive(false);
-        //    movingTrigger.SetActive(false);
-        //    liftingTrigger.SetActive(false);
-        //    carryingTrigger.SetActive(false);
-
-        //    idleText.SetActive(false);
-        //    movingText.SetActive(false);
-        //    liftingText.SetActive(false);
-        //    carryingText.SetActive(false);
-
-        //    Debug.Log("break trigger is on");
-        //}
 
         if (detectingState.state == movingState.idle)
         {
@@ -54,11 +30,6 @@ public class AssignState : MonoBehaviour
             movingTrigger.SetActive(false);
             liftingTrigger.SetActive(false);
             carryingTrigger.SetActive(false);
-
-            idleText.SetActive(true);
-            movingText.SetActive(false);
-            liftingText.SetActive(false);
-            carryingText.SetActive(false);
 
             //Debug.Log("idle trigger is on");
         }
@@ -70,11 +41,6 @@ public class AssignState : MonoBehaviour
             liftingTrigger.SetActive(false);
             carryingTrigger.SetActive(false);
 
-            idleText.SetActive(false);
-            movingText.SetActive(true);
-            liftingText.SetActive(false);
-            carryingText.SetActive(false);
-
             //Debug.Log("moving state is on");
         }
 
@@ -85,10 +51,6 @@ public class AssignState : MonoBehaviour
             liftingTrigger.SetActive(true);
             carryingTrigger.SetActive(false);
 
-            idleText.SetActive(false);
-            movingText.SetActive(false);
-            liftingText.SetActive(true);
-            carryingText.SetActive(false);
 
             //Debug.Log("lifting state is on");
         }
@@ -99,11 +61,6 @@ public class AssignState : MonoBehaviour
             movingTrigger.SetActive(false);
             liftingTrigger.SetActive(false);
             carryingTrigger.SetActive(true);
-
-            idleText.SetActive(false);
-            movingText.SetActive(false);
-            liftingText.SetActive(false);
-            carryingText.SetActive(true);
 
             //Debug.Log("carrying state");
         }
