@@ -26,11 +26,19 @@ EditorUserSettings:
     RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c730515160b1d2d3a2338223c0e36acf53a31f6fe
       flags: 0
+<<<<<<< HEAD
     RecentlyUsedScenePath-7:
       value: 22424703114646680e0b0227036c731114590d24253c3f
       flags: 0
     RecentlyUsedScenePath-8:
       value: 22424703114646680e0b0227036c681104121025393b23081f67083debf42d
+=======
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c681104121025393b23081f67083debf42d
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c731114590d24253c3f
+>>>>>>> parent of 5f11baa (assign states)
       flags: 0
     RecentlyUsedScenePath-9:
       value: 3350570d04520c48420d032f5e2e5a04175915253a2d2b35233d5200e3ed2434e7f479c1ee3d371a3006ea300d2a1870d1020819f7081e0e0341ce0d14f115005ee817d31fc51a12df3115c9c53bd8e7d0daddfec1a5f2d6d7cbb9
