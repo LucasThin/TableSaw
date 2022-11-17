@@ -1358,11 +1358,11 @@ GameObject:
   - component: {fileID: 244175749}
   m_Layer: 2
   m_Name: Carrying Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &244175748
 Transform:
   m_ObjectHideFlags: 0
@@ -1385,7 +1385,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244175747}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.3
   m_Height: 1
@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244175747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd0200e8c279f42842a20abcd5aa27, type: 3}
   m_Name: 
@@ -1663,7 +1663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286116472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 1.088, z: 1}
   m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000001}
   m_Children: []
   m_Father: {fileID: 588738584}
@@ -5036,8 +5036,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588738584}
+  - component: {fileID: 588738585}
   m_Layer: 0
-  m_Name: Direction Anchor
+  m_Name: HapticSensors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5050,8 +5051,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588738583}
-  m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.7071066}
-  m_LocalPosition: {x: -2.7060006, y: 1.1176, z: 0.42599982}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1929175071}
@@ -5060,7 +5061,23 @@ Transform:
   - {fileID: 1774362799}
   m_Father: {fileID: 7079690333769088225}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &588738585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588738583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c049b7852a6e7a4baee95019d79fbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  haptics:
+  - {fileID: 286116473}
+  - {fileID: 1459458483}
+  - {fileID: 1774362799}
 --- !u!1001 &588795199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5202,6 +5219,7 @@ GameObject:
   - component: {fileID: 601606369}
   - component: {fileID: 601606368}
   - component: {fileID: 601606370}
+  - component: {fileID: 601606371}
   m_Layer: 0
   m_Name: Manager
   m_TagString: manager
@@ -5260,12 +5278,27 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601606367}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.24
   m_Height: 1.73
   m_Direction: 1
   m_Center: {x: 0, y: 0.83, z: 0}
+--- !u!114 &601606371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601606367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30ecc204093dac41b822483cd7a7c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hapticSensors: {fileID: 588738585}
+  _haptics: []
+  distances: []
 --- !u!1 &612169679
 GameObject:
   m_ObjectHideFlags: 0
@@ -9320,7 +9353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459458482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 1.088, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000001}
   m_Children: []
   m_Father: {fileID: 588738584}
@@ -9913,11 +9946,11 @@ GameObject:
   - component: {fileID: 1629145948}
   m_Layer: 2
   m_Name: Lifting Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1629145947
 Transform:
   m_ObjectHideFlags: 0
@@ -9940,7 +9973,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629145946}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.3
   m_Height: 1
@@ -9965,7 +9998,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629145946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd0200e8c279f42842a20abcd5aa27, type: 3}
   m_Name: 
@@ -10704,7 +10737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774362798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: -0}
+  m_LocalPosition: {x: 1, y: 1.088, z: -0}
   m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000001}
   m_Children: []
   m_Father: {fileID: 588738584}
@@ -10944,11 +10977,11 @@ GameObject:
   - component: {fileID: 1864205435}
   m_Layer: 2
   m_Name: Moving Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1864205434
 Transform:
   m_ObjectHideFlags: 0
@@ -10971,7 +11004,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864205433}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.2
   m_Height: 0.6
@@ -10996,7 +11029,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864205433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd0200e8c279f42842a20abcd5aa27, type: 3}
   m_Name: 
@@ -11425,7 +11458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929175070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 1.088, z: -1}
   m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000001}
   m_Children: []
   m_Father: {fileID: 588738584}
@@ -11510,7 +11543,7 @@ GameObject:
   - component: {fileID: 1936063216}
   m_Layer: 2
   m_Name: Idle Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11553,7 +11586,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936063213}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.2
   m_Height: 1
@@ -11615,7 +11648,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936063213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd0200e8c279f42842a20abcd5aa27, type: 3}
   m_Name: 
@@ -38391,7 +38424,7 @@ GameObject:
   - component: {fileID: 5519807744429243631}
   m_Layer: 0
   m_Name: InteractionRigOVR-Basic (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
