@@ -14,7 +14,7 @@
       "url": "https://package.openupm.com"
     },
     "com.meta.movement": {
-      "version": "file:C:/Users/lucas/Downloads/Unity-Movement-1.2.2/Unity-Movement-1.2.2",
+      "version": "file:C:/Users/ImmersionLab/Downloads/Unity-Movement-1.2.2",
       "depth": 0,
       "source": "local",
       "dependencies": {
