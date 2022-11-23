@@ -3164,6 +3164,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5127552051096300193, guid: e7434f7920e00454f84b6f7536b4f753,
+        type: 3}
+      propertyPath: _hapticSensors
+      value: 
+      objectReference: {fileID: 588738585}
     - target: {fileID: 8083246610014559811, guid: e7434f7920e00454f84b6f7536b4f753,
         type: 3}
       propertyPath: range
@@ -3396,6 +3401,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5127552051096300193, guid: e7434f7920e00454f84b6f7536b4f753,
+        type: 3}
+      propertyPath: _hapticSensors
+      value: 
+      objectReference: {fileID: 588738585}
     - target: {fileID: 8083246610014559811, guid: e7434f7920e00454f84b6f7536b4f753,
         type: 3}
       propertyPath: range
@@ -4638,6 +4648,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5127552051096300193, guid: e7434f7920e00454f84b6f7536b4f753,
+        type: 3}
+      propertyPath: _hapticSensors
+      value: 
+      objectReference: {fileID: 588738585}
     - target: {fileID: 8083246610014559811, guid: e7434f7920e00454f84b6f7536b4f753,
         type: 3}
       propertyPath: range
@@ -4974,6 +4989,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5127552051096300193, guid: e7434f7920e00454f84b6f7536b4f753,
+        type: 3}
+      propertyPath: _hapticSensors
+      value: 
+      objectReference: {fileID: 588738585}
     - target: {fileID: 8083246610014559811, guid: e7434f7920e00454f84b6f7536b4f753,
         type: 3}
       propertyPath: range
@@ -6215,6 +6235,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5127552051096300193, guid: e7434f7920e00454f84b6f7536b4f753,
+        type: 3}
+      propertyPath: _hapticSensors
+      value: 
+      objectReference: {fileID: 588738585}
     - target: {fileID: 8083246610014559811, guid: e7434f7920e00454f84b6f7536b4f753,
         type: 3}
       propertyPath: range
@@ -7636,6 +7661,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5127552051096300193, guid: e7434f7920e00454f84b6f7536b4f753,
+        type: 3}
+      propertyPath: _hapticSensors
+      value: 
+      objectReference: {fileID: 588738585}
     - target: {fileID: 8083246610014559811, guid: e7434f7920e00454f84b6f7536b4f753,
         type: 3}
       propertyPath: range

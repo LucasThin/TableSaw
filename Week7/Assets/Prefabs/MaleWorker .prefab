@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 8083246610014559820}
   - component: {fileID: 8083246610014559811}
   - component: {fileID: 711391579286202}
+  - component: {fileID: 5127552051096300193}
   m_Layer: 0
   m_Name: 'MaleWorker '
   m_TagString: Untagged
@@ -481,6 +482,21 @@ CapsuleCollider:
   m_Height: 1.86
   m_Direction: 1
   m_Center: {x: 0, y: 0.8397348, z: 0}
+--- !u!114 &5127552051096300193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083246610014559816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30ecc204093dac41b822483cd7a7c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hapticSensors: {fileID: 0}
+  _haptics: []
+  distances: []
 --- !u!1 &8083246610026380890
 GameObject:
   m_ObjectHideFlags: 0
