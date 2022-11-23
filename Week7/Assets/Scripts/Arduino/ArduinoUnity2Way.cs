@@ -13,6 +13,7 @@ public class ArduinoUnity2Way : MonoBehaviour
     private string byteValue;
 
     [SerializeField] private bool button = false;
+    [SerializeField] private ToggleUI _toggleUI;
     void Awake()
     {
         OpenConnection();
@@ -35,6 +36,7 @@ public class ArduinoUnity2Way : MonoBehaviour
              if (value == "up")
              {
                  button = true;
+                 _toggleUI.ToggleUIOn();
 
              }
              else if (value == "down")

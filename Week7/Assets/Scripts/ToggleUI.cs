@@ -16,7 +16,7 @@ public class ToggleUI : MonoBehaviour
     public void ToggleUIOn()
     {
         Debug.Log("change culling mask");
-        _mainCamera.cullingMask |= 1 << LayerMask.NameToLayer("ToggleUI");
+        _mainCamera.cullingMask |= 1 << LayerMask.NameToLayer("UI");
     }
     
     // Update is called once per frame
