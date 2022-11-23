@@ -3,64 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssignState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssignState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DetectDitection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DetectDitection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DetectingState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DetectingState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/tableSaw2.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/tableSaw2.mtl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/tableSaw2.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/tableSaw2.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0000_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0000_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0001_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0001_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0002_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0002_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0003_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0003_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0004_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0004_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0005_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0005_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0006_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0006_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0007_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0007_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0008_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0008_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0009_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0009_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0010_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0010_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0011_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0011_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0012_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0012_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0013_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0013_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0014_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0014_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0015_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0015_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0016_map_Kd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/TableSaw/textures/mesh_material0016_map_Kd.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlyerControllr.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlyerControllr.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MaleWorker .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MaleWorker .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RandomMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RandomMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunningFast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunningFast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WarehouseXR.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkRandom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkRandom.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkTowards.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkTowards.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Isabel Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Isabel Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arduino/Arduino2Unity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectDirection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectingState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -142,6 +88,8 @@
       <workItem from="1668569549082" duration="608000" />
       <workItem from="1668662604433" duration="939000" />
       <workItem from="1668667495116" duration="2147000" />
+      <workItem from="1668727207027" duration="136000" />
+      <workItem from="1669175355072" duration="1931000" />
     </task>
     <servers />
   </component>
