@@ -8,21 +8,31 @@ public class CalculateDistance : MonoBehaviour
     public HapticSensors _hapticSensors;
     [SerializeField] private List<Transform> _haptics = new List<Transform>();
     [SerializeField] private List<float> distances = new List<float>();
+    [SerializeField] private GameObject AlertModel;
+    [SerializeField] private GameObject Model;
+    [SerializeField] private GameObject Avatar;
     private int x = 0;
 
     private bool _removeList;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        AlertModel.SetActive(false);
+        Avatar.SetActive(false);
+        Model.SetActive(true);
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             //Update all distances between
-            for(int y = 0; y<_haptics.Count; y++)
+            AlertModel.SetActive(true);
+            Avatar.SetActive(true);
+            Model.SetActive(false);
+
+            for (int y = 0; y<_haptics.Count; y++)
             {
                 distances[y] = Vector3.Distance(transform.position, _haptics[y].position);
             }
@@ -58,8 +68,10 @@ public class CalculateDistance : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-
         _removeList = true;
+        AlertModel.SetActive(false);
+        Avatar.SetActive(false);
+        Model.SetActive(true);
     }
 
     private void Update()
