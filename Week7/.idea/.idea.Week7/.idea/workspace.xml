@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Loadbox/CardboardA3_normal.jpeg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Loadbox/CardboardA3_normal.jpeg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Arduino.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Arduino.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoUnity2Way.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoUnity2Way.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +83,7 @@
       <workItem from="1669175355072" duration="2687000" />
       <workItem from="1669605929380" duration="176000" />
       <workItem from="1669613082796" duration="191000" />
-      <workItem from="1669614588334" duration="1681000" />
+      <workItem from="1669614588334" duration="2275000" />
     </task>
     <servers />
   </component>
