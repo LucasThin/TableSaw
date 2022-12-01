@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Week7/Assets/Materials/Red.mat.meta
 guid: d33095ae8312f2c47ac7871acc60a02d
+========
+guid: 5745b06558bb08a4bb74026f76354901
+>>>>>>>> 6453fe4236ba3226cdd4ad0b5104cbd188357f52:Week7/Assets/Materials/Immersion_lab.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
