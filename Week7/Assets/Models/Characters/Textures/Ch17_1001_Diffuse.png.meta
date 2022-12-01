@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Week7/Assets/Models/Characters/Textures/Ch17_1001_Diffuse.png.meta
 guid: b55d9dfc66c17234e936085e3b362799
+========
+guid: 14a1f26b6fcb2b3419212e1a2baddf0c
+>>>>>>>> 6453fe4236ba3226cdd4ad0b5104cbd188357f52:Week7/Assets/Models/Characters/Textures/Blue_Diffuse.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
