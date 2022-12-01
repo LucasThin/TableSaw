@@ -9,13 +9,18 @@ public class FixedGround : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //originalOffset = this.transform.position - player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Hip's position
         Vector3 pos = player.transform.position;
-        transform.position = new Vector3(player.transform.position.x, 0f, player.transform.position.z + 1.5f);
+        this.transform.position = new Vector3(player.transform.position.x, 0f, player.transform.position.z);
+        Quaternion myRotation = Quaternion.identity;
+        myRotation.eulerAngles = new Vector3(0f, player.transform.eulerAngles.y, 0f);
+        this.transform.rotation = Quaternion.Slerp(transform.rotation, myRotation, 2000);
+
     }
 }
