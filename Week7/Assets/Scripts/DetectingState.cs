@@ -28,7 +28,7 @@ public class DetectingState : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(_camera.transform.position.x, 0f, _camera.transform.position.z);
+        //transform.position = new Vector3(_camera.transform.position.x, 0f, _camera.transform.position.z);
 
         currentPos = transform.position;
         float distance = Vector3.Distance(lastPos, currentPos);
