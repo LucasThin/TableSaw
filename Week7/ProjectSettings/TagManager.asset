@@ -4,17 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - public
-  - manager
   - worker
+  - manager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ToggleUI
+  - 
   - Water
   - UI
-  - minimap
+  - 
+  - 
+  - 
+  - HiddenMesh
+  - Character
+  - MirroredCharacter
   - 
   - 
   - 
@@ -35,11 +39,6 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - Teleport
   m_SortingLayers:
   - name: Default
     uniqueID: 0
