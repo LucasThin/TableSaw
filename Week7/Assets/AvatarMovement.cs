@@ -16,14 +16,14 @@ public class AvatarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Greeting");
             anim.Play("Salute");
         }
         else if (detectingState.state == movingState.moving)
         {
-            Debug.Log("Walking");
+            //Debug.Log("Walking");
             anim.Play("Walking 0");
         }
     }

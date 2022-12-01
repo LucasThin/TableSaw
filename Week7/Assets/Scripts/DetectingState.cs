@@ -38,23 +38,23 @@ public class DetectingState : MonoBehaviour
         if (distance > 0.01 && ifCarry == false)
         {
             state = movingState.moving;
-            Debug.Log("Moving state");
+            //Debug.Log("Moving state");
         }
         else if (distance > 0.01 && ifCarry == true)
         {
             state = movingState.carrying;
-            Debug.Log("Carrying state");
+            //Debug.Log("Carrying state");
         }
         else if (_time > 1f && ifCarry == false)
         {
             state = movingState.idle;
-            Debug.Log("idle state");
+            //Debug.Log("idle state");
             _time = 0;
         }
         else if (_time > 1f && ifCarry == true)
         {
             state = movingState.lift;
-            Debug.Log("lift state");
+           //Debug.Log("lift state");
             _time = 0;
         }
         else if (_time < 1f)
@@ -65,14 +65,14 @@ public class DetectingState : MonoBehaviour
         lastPos = currentPos;
     }
 
-    public void Carrying()
+/*    public void Carrying()
     {
         ifCarry = true;
-        Debug.Log("Blocked");
+        //Debug.Log("Blocked");
     }
 
     public void NoCarry()
     {
         ifCarry = false;
-    }
+    }*/
 }
