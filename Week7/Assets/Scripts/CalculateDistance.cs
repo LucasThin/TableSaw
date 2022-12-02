@@ -7,7 +7,7 @@ public class CalculateDistance : MonoBehaviour
 {
     public HapticSensors _hapticSensors;
     [SerializeField] private List<Transform> _haptics = new List<Transform>();
-    [SerializeField] private List<float> distances = new List<float>();
+    public List<float> distances = new List<float>();
     [SerializeField] private GameObject AlertModel;
     [SerializeField] private GameObject Model;
     [SerializeField] private GameObject Avatar;

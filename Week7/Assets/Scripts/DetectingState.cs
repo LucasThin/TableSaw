@@ -18,7 +18,7 @@ public class DetectingState : MonoBehaviour
     private Vector3 currentPos;
     public GameObject _camera;
     private bool ifCarry = false;
-    float _time = 0;
+    private float _time = 0;
 
     void Awake()
     {

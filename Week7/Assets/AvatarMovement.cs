@@ -7,7 +7,9 @@ public class AvatarMovement : MonoBehaviour
     // Start is called before the first frame update
     private Animator anim;
     [SerializeField] DetectingState detectingState;
+    [SerializeField] CalculateDistance calculateDistance;
     [SerializeField] float degreesPerSecond = 80;
+    private float _time = 0;
 
 
     void Start()
@@ -22,16 +24,6 @@ public class AvatarMovement : MonoBehaviour
         {
             anim.SetTrigger("Salute");
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            //anim.Play("Right Turn");
-            transform.Rotate(0, 180, 0);
-            anim.Play("Salute");
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.Rotate(0, 180, 0);
-        }
         if (detectingState.state == movingState.moving)
         {
             //Debug.Log("Walking");
@@ -41,6 +33,17 @@ public class AvatarMovement : MonoBehaviour
         else if (detectingState.state == movingState.idle)
         {
             anim.SetBool("isWalking", false);
+        }
+        if (calculateDistance.distances.Count > 0)
+        {
+            this.transform.position = Vector3.Lerp(transform.position, new Vector3(-0.5f, 0f, 1.5f), Time.deltaTime * 4);
+            //anim.SetTrigger("Dodge");
+
+        }
+        if (calculateDistance.distances.Count == 0)
+        {
+            this.transform.position = Vector3.Lerp(transform.position, new Vector3(0f, 0f, 1.5f), Time.deltaTime * 4);
+
         }
     }
 }
