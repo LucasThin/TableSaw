@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 
-public class ArduinoUnity2Way : MonoBehaviour
+public class ArduinoVest : MonoBehaviour
 {
     public static string portName = "COM6";
     public static int portSpeed = 9600;
@@ -162,16 +162,14 @@ public class ArduinoUnity2Way : MonoBehaviour
     
     public void TurnOnBehaviour()
     {
-       
-        //sp.Write("O");
-        //Debug.Log("on");
+        sp.Write("O");
+        Debug.Log("on");
     }
 
     public void TurnOffBehaviour()
     {
-        
-        //sp.Write("F");
-        //Debug.Log("off");
+        sp.Write("F");
+        Debug.Log("off");
     }
 
 

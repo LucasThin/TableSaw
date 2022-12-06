@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="" />
+    <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArduinoDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArduinoDemo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoUnity2Way.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoUnity2Way.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/lucas/Documents/Unity/Warehouse/Week7/Assets/Scripts/Arduino.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arduino/Arduino2Unity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToggleUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,6 +92,9 @@
       <workItem from="1669605929380" duration="176000" />
       <workItem from="1669613082796" duration="191000" />
       <workItem from="1669614588334" duration="2275000" />
+      <workItem from="1669934291851" duration="1022000" />
+      <workItem from="1670283610861" duration="932000" />
+      <workItem from="1670300238839" duration="756000" />
     </task>
     <servers />
   </component>

@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1997638055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,10 +1306,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9094b2b580bd34890e2a80b921c63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  gobj: {fileID: 769532645}
-  gobj2: {fileID: 15649277}
-  byteValue: 0
+  _haptics:
+  - frontL
+  - frontR
+  - backL
+  - backR
+  - left
+  - right
+  button: 0
+  _toggleUI: {fileID: 0}
 --- !u!4 &1997638056
 Transform:
   m_ObjectHideFlags: 0
