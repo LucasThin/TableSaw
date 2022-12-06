@@ -27,6 +27,7 @@ public class DetectingState : MonoBehaviour
     void Awake()
     {
         lastPos = transform.position;
+        state = movingState.idle;
     }
 
     void Update()
