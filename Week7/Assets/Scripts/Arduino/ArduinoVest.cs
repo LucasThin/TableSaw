@@ -26,7 +26,6 @@ public class ArduinoVest : MonoBehaviour
        
         if (sp.IsOpen)
         {
-            
             string value = ReadSerialPort();
          
          if (value != null)
@@ -53,31 +52,37 @@ public class ArduinoVest : MonoBehaviour
     public void OnHapticsFrontLeft()
     {
         sp.Write("FL");
+        Debug.Log("FL");
     }
     
     public void OnHapticsFrontright()
     {
         sp.Write("FR");
+        Debug.Log("FR");
     }
     
     public void OnHapticsBackLeft()
     {
         sp.Write("BL");
+        Debug.Log("BL");
     }
     
     public void OnHapticsBackRight()
     {
         sp.Write("BR");
+        Debug.Log("BR");
     }
     
     public void OnHapticsLeft()
     {
-        sp.Write("L");
+        sp.Write("SL");
+        Debug.Log("SL");
     }
     
     public void OnHapticsRight()
     {
-        sp.Write("R");
+        sp.Write("SR");
+        Debug.Log("SR");
     }
     
     
@@ -139,34 +144,5 @@ public class ArduinoVest : MonoBehaviour
         sp.Write("F");
         Debug.Log("off");
     }
-
-
-    public void VibrateHaptics(string haptic)
-    {
-        if (haptic == _haptics[0])
-        {
-            Debug.Log("Front Left Haptic");
-            _hapticsFrontL = true;
-        } else if (haptic == _haptics[1])
-        {
-            Debug.Log("Front Right Haptic");
-            _hapticsFrontR = true;
-        } else if (haptic == _haptics[2])
-        {
-            Debug.Log("Back Left Haptic");
-            _hapticsBackL = true;
-        } else if (haptic == _haptics[3])
-        {
-            Debug.Log("Back right haptic");
-            _hapticsBackR = true;
-        } else if (haptic == _haptics[4])
-        {
-            Debug.Log("Left");
-            _hapticsL = true;
-        } else if (haptic == _haptics[5])
-        {
-            Debug.Log("Right");
-            _hapticsR = true;
-        }
-    }
+    
 }

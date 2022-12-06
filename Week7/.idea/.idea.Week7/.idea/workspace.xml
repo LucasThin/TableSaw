@@ -4,7 +4,7 @@
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoVest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoVest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +91,7 @@
       <workItem from="1669614588334" duration="2275000" />
       <workItem from="1669934291851" duration="1022000" />
       <workItem from="1670283610861" duration="932000" />
-      <workItem from="1670300238839" duration="1676000" />
+      <workItem from="1670300238839" duration="5378000" />
     </task>
     <servers />
   </component>

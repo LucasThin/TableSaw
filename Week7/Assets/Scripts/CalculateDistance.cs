@@ -112,30 +112,40 @@ public class CalculateDistance : MonoBehaviour
         }
         //Debug.Log("finding lowest distance");
          
-        //coming from the back
+        //coming from the left
+        if (minDirection == 2)
+        {
+            Debug.Log("Coming from the left");
+            _arduinoVest.OnHapticsRight();
+        }
+        //coming from the frontleft
         if (minDirection == 0)
         {
-            Debug.Log("Coming from the back");
-            _arduinoVest.OnHapticsBackLeft();
-            _arduinoVest.OnHapticsBackRight();
+            Debug.Log("Coming from the frontleft");
+            _arduinoVest.OnHapticsFrontLeft();
 
         }
-        //coming from the front
-        else if (minDirection == 1)
+        //coming from the frontright
+        if (minDirection == 1)
         {
-            Debug.Log("Coming from the front");
-            _arduinoVest.OnHapticsFrontLeft();
+            Debug.Log("Coming from the frontright");
             _arduinoVest.OnHapticsFrontright();
 
         }
-        //coming from the left
-        else if (minDirection == 2)
+        //coming from the backleft
+        if (minDirection == 4)
         {
-            Debug.Log("Coming from the left");
-            _arduinoVest.OnHapticsLeft();
+            Debug.Log("Coming from the backleft");
+            _arduinoVest.OnHapticsBackLeft();
+        }
+        //coming from the backright
+        if (minDirection == 5)
+        {
+            Debug.Log("Coming from the backright");
+            _arduinoVest.OnHapticsBackRight();
         }
         //coming from the right
-        else if (minDirection == 3)
+        if (minDirection == 3)
         {
             Debug.Log("Coming from the right");
             _arduinoVest.OnHapticsRight();
