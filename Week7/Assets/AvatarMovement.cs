@@ -39,7 +39,7 @@ public class AvatarMovement : MonoBehaviour
         if (calculateDistance.distances.Count > 0 && ifDodge == false)
         {
             Vector3 targetPosition = transform.position;
-            transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x-0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x - 0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
             Debug.Log("dodge");
             ifDodge = true;
 

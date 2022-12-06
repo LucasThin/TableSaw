@@ -11,16 +11,6 @@ public class ArduinoVest : MonoBehaviour
     private SerialPort sp = new SerialPort(portName, portSpeed);
     private bool state;
     private string byteValue;
-    public string[ ] _haptics = new string[ ]{"frontL", "frontR", "backL", "backR", "left", "right"};
-    
-    
-    //haptics bool
-    private bool _hapticsFrontL = false;
-    private bool _hapticsFrontR = false;
-    private bool _hapticsBackL = false;
-    private bool _hapticsBackR = false;
-    private bool _hapticsL = false;
-    private bool _hapticsR = false;
 
     [SerializeField] private bool button = false;
     [SerializeField] private ToggleUI _toggleUI;
@@ -58,30 +48,6 @@ public class ArduinoVest : MonoBehaviour
 
         }
         
-    }
-
-    public void OnHaptics(string hapticsName)
-    {
-        if (hapticsName == "frontLeft")
-        {
-            OnHapticsFrontLeft();
-        } else if (hapticsName == "frontRight")
-        {
-            OnHapticsFrontright();
-        } else if (hapticsName == "sideLeft")
-        {
-            OnHapticsLeft();
-        } else if (hapticsName == "sideRight")
-        {
-            OnHapticsRight();
-        } else if (hapticsName == "backLeft")
-        {
-            OnHapticsBackLeft();
-        }
-        else
-        {
-            OnHapticsBackRight();
-        }
     }
 
     public void OnHapticsFrontLeft()

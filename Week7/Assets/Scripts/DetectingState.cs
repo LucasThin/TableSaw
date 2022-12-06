@@ -58,8 +58,8 @@ public class DetectingState : MonoBehaviour
         else if (_time > 1f && ifCarry == false)
         {
             state = movingState.idle;
-            IdleTrigger.SetActive(true);
             WalkingTrigger.SetActive(false);
+            IdleTrigger.SetActive(true);
             LiftingTrigger.SetActive(false);
             CarryingTrigger.SetActive(false);
             _time = 0;

@@ -8,11 +8,13 @@ public class CalculateDistance : MonoBehaviour
     public HapticSensors _hapticSensors;
     [SerializeField] private List<Transform> _haptics = new List<Transform>();
     public List<float> distances = new List<float>();
+
     [SerializeField] private GameObject AlertModel;
     [SerializeField] private GameObject Model;
     [SerializeField] private GameObject Avatar;
     [SerializeField] private GameObject AlertPlayer;
     [SerializeField] private GameObject AlertLight;
+    [SerializeField] private ArduinoVest _arduinoVest;
     private int x = 0;
 
     private bool _removeList;
@@ -114,29 +116,29 @@ public class CalculateDistance : MonoBehaviour
         if (minDirection == 0)
         {
             Debug.Log("Coming from the back");
-            // _playBhaptics.Haptics(10f-0.1f * min, 0.1f*min);
+            _arduinoVest.OnHapticsBackLeft();
+            _arduinoVest.OnHapticsBackRight();
 
         }
         //coming from the front
         else if (minDirection == 1)
         {
             Debug.Log("Coming from the front");
-           // leftController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
-           // rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            _arduinoVest.OnHapticsFrontLeft();
+            _arduinoVest.OnHapticsFrontright();
+
         }
         //coming from the left
         else if (minDirection == 2)
         {
             Debug.Log("Coming from the left");
-            //OVRInput.SetControllerVibration(1.0f - 0.1f * min, 0.1f * min, OVRInput.Controller.LTouch);
-            //leftController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            _arduinoVest.OnHapticsLeft();
         }
         //coming from the right
         else if (minDirection == 3)
         {
             Debug.Log("Coming from the right");
-            //OVRInput.SetControllerVibration(1.0f - 0.1f * min, 0.1f * min, OVRInput.Controller.RTouch);
-            //rightController.SendHapticImpulse(1.0f-0.1f * min, 0.1f * min);
+            _arduinoVest.OnHapticsRight();
         }
     }
 
