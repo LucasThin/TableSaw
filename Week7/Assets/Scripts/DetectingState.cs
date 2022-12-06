@@ -16,19 +16,22 @@ public class DetectingState : MonoBehaviour
     public movingState state;
     private Vector3 lastPos;
     private Vector3 currentPos;
-    public GameObject _camera;
     private bool ifCarry = false;
-    float _time = 0;
+    private float _time = 0;
+
+    [SerializeField] GameObject IdleTrigger;
+    [SerializeField] GameObject WalkingTrigger;
+    [SerializeField] GameObject LiftingTrigger;
+    [SerializeField] GameObject CarryingTrigger;
 
     void Awake()
     {
         lastPos = transform.position;
-        state = movingState.idle;
     }
 
     void Update()
     {
-        transform.position = new Vector3(_camera.transform.position.x, 0f, _camera.transform.position.z);
+        //transform.position = new Vector3(_camera.transform.position.x, 0f, _camera.transform.position.z);
 
         currentPos = transform.position;
         float distance = Vector3.Distance(lastPos, currentPos);
@@ -38,23 +41,35 @@ public class DetectingState : MonoBehaviour
         if (distance > 0.01 && ifCarry == false)
         {
             state = movingState.moving;
-            Debug.Log("Moving state");
+            IdleTrigger.SetActive(false);
+            WalkingTrigger.SetActive(true);
+            LiftingTrigger.SetActive(false);
+            CarryingTrigger.SetActive(false);
         }
         else if (distance > 0.01 && ifCarry == true)
         {
             state = movingState.carrying;
-            Debug.Log("Carrying state");
+            IdleTrigger.SetActive(false);
+            WalkingTrigger.SetActive(false);
+            LiftingTrigger.SetActive(true);
+            CarryingTrigger.SetActive(false);
         }
         else if (_time > 1f && ifCarry == false)
         {
             state = movingState.idle;
-            Debug.Log("idle state");
+            IdleTrigger.SetActive(true);
+            WalkingTrigger.SetActive(false);
+            LiftingTrigger.SetActive(false);
+            CarryingTrigger.SetActive(false);
             _time = 0;
         }
         else if (_time > 1f && ifCarry == true)
         {
             state = movingState.lift;
-            Debug.Log("lift state");
+            IdleTrigger.SetActive(false);
+            WalkingTrigger.SetActive(false);
+            LiftingTrigger.SetActive(false);
+            CarryingTrigger.SetActive(true);
             _time = 0;
         }
         else if (_time < 1f)
@@ -65,14 +80,14 @@ public class DetectingState : MonoBehaviour
         lastPos = currentPos;
     }
 
-    public void Carrying()
+/*    public void Carrying()
     {
         ifCarry = true;
-        Debug.Log("Blocked");
+        //Debug.Log("Blocked");
     }
 
     public void NoCarry()
     {
         ifCarry = false;
-    }
+    }*/
 }

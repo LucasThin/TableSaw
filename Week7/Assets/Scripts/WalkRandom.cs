@@ -8,6 +8,7 @@ public class WalkRandom : MonoBehaviour //don't forget to change the script name
 {
     public NavMeshAgent agent;
     public float range; //radius of sphere
+    private Animator anim;
 
     public Transform centrePoint; //centre of the area the agent wants to move around in
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
@@ -15,6 +16,8 @@ public class WalkRandom : MonoBehaviour //don't forget to change the script name
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        anim.Play("Walking 0");
     }
 
 
