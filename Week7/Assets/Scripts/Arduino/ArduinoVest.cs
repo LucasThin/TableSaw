@@ -55,61 +55,63 @@ public class ArduinoVest : MonoBehaviour
                  button = false;
              }
          }
-        }
 
-        if (_hapticsFrontL)
+        }
+        
+    }
+
+    public void OnHaptics(string hapticsName)
+    {
+        if (hapticsName == "frontLeft")
         {
             OnHapticsFrontLeft();
-        } else if (_hapticsFrontR)
+        } else if (hapticsName == "frontRight")
         {
             OnHapticsFrontright();
-        } else if (_hapticsBackL)
-        {
-            OnHapticsBackLeft();
-        } else if (_hapticsBackR)
-        {
-            OnHapticsBackRight();
-        } else if (_hapticsL)
+        } else if (hapticsName == "sideLeft")
         {
             OnHapticsLeft();
-        } else if (_hapticsR)
+        } else if (hapticsName == "sideRight")
         {
             OnHapticsRight();
+        } else if (hapticsName == "backLeft")
+        {
+            OnHapticsBackLeft();
         }
         else
         {
-            sp.Write("F");
+            OnHapticsBackRight();
         }
     }
 
     public void OnHapticsFrontLeft()
     {
-        sp.Write("O");
+        sp.Write("FL");
     }
     
     public void OnHapticsFrontright()
     {
-        
+        sp.Write("FR");
     }
     
     public void OnHapticsBackLeft()
     {
-        
+        sp.Write("BL");
     }
     
     public void OnHapticsBackRight()
     {
-        
+        sp.Write("BR");
     }
     
     public void OnHapticsLeft()
     {
-        
+        sp.Write("L");
     }
     
     public void OnHapticsRight()
     {
-        
+        sp.Write("R");
     }
     
     
