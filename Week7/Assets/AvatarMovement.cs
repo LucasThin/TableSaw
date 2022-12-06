@@ -16,6 +16,7 @@ public class AvatarMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        ifDodge = false;
     }
 
     // Update is called once per frame
@@ -38,8 +39,7 @@ public class AvatarMovement : MonoBehaviour
         if (calculateDistance.distances.Count > 0 && ifDodge == false)
         {
             Vector3 targetPosition = transform.position;
-            this.transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x-0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
-            //anim.SetTrigger("Dodge");
+            transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x-0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
             Debug.Log("dodge");
             ifDodge = true;
 
@@ -47,7 +47,7 @@ public class AvatarMovement : MonoBehaviour
         if (calculateDistance.distances.Count == 0 && ifDodge == true)
         {
             Vector3 targetPosition = transform.position;
-            this.transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x + 0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x + 0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
             ifDodge = false;
         }
     }
