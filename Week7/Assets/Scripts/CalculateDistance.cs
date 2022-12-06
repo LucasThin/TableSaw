@@ -11,6 +11,8 @@ public class CalculateDistance : MonoBehaviour
     [SerializeField] private GameObject AlertModel;
     [SerializeField] private GameObject Model;
     [SerializeField] private GameObject Avatar;
+    [SerializeField] private GameObject AlertPlayer;
+    [SerializeField] private GameObject AlertLight;
     private int x = 0;
 
     private bool _removeList;
@@ -20,6 +22,8 @@ public class CalculateDistance : MonoBehaviour
     void Start()
     {
         AlertModel.SetActive(false);
+        AlertPlayer.SetActive(false);
+        AlertLight.SetActive(false);
         Avatar.SetActive(false);
         Model.SetActive(true);
     }
@@ -29,7 +33,9 @@ public class CalculateDistance : MonoBehaviour
         {
             //Update all distances between
             AlertModel.SetActive(true);
+            AlertPlayer.SetActive(true);
             Avatar.SetActive(true);
+            AlertLight.SetActive(true);
             Model.SetActive(false);
 
             for (int y = 0; y<_haptics.Count; y++)
@@ -70,7 +76,9 @@ public class CalculateDistance : MonoBehaviour
     {
         _removeList = true;
         AlertModel.SetActive(false);
+        AlertPlayer.SetActive(false);
         Avatar.SetActive(false);
+        AlertLight.SetActive(false);
         Model.SetActive(true);
     }
 

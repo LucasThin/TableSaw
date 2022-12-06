@@ -10,6 +10,7 @@ public class AvatarMovement : MonoBehaviour
     [SerializeField] CalculateDistance calculateDistance;
     [SerializeField] float degreesPerSecond = 80;
     private float _time = 0;
+    private bool ifDodge;
 
 
     void Start()
@@ -34,16 +35,20 @@ public class AvatarMovement : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
         }
-        if (calculateDistance.distances.Count > 0)
+        if (calculateDistance.distances.Count > 0 && ifDodge == false)
         {
-            this.transform.position = Vector3.Lerp(transform.position, new Vector3(-0.5f, 0f, 1.5f), Time.deltaTime * 4);
+            Vector3 targetPosition = transform.position;
+            this.transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x-0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
             //anim.SetTrigger("Dodge");
+            Debug.Log("dodge");
+            ifDodge = true;
 
         }
-        if (calculateDistance.distances.Count == 0)
+        if (calculateDistance.distances.Count == 0 && ifDodge == true)
         {
-            this.transform.position = Vector3.Lerp(transform.position, new Vector3(0f, 0f, 1.5f), Time.deltaTime * 4);
-
+            Vector3 targetPosition = transform.position;
+            this.transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x + 0.5f, targetPosition.y, targetPosition.z), Time.deltaTime * 4);
+            ifDodge = false;
         }
     }
 }
