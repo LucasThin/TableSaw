@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoVest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoVest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Factory_Interior.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Factory_Interior.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuideController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuideController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuidePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuidePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,12 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/lucas/Documents/Unity/Warehouse/Week7/Assets/Scripts/Arduino.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arduino/Arduino2Unity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToggleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/ArduinoUnity/ArduinoUnity/ArduinoUnity/Assets/ArduinoUnity2Way.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/ArduinoUnity/ArduinoUnity/ArduinoUnity/Assets/Unity2Arduino.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/ArduinoUnity/ArduinoUnity/ArduinoUnity/Assets/Unity2Arduino.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Unity-Movement-1.2.2/Unity-Movement-1.2.2/Runtime/Scripts/Effects/DriveSkeletalLateUpdateLogic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -92,6 +93,7 @@
       <workItem from="1669934291851" duration="1022000" />
       <workItem from="1670283610861" duration="932000" />
       <workItem from="1670300238839" duration="5378000" />
+      <workItem from="1670440430057" duration="1646000" />
     </task>
     <servers />
   </component>
