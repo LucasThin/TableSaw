@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,6 +15,7 @@ public class GuideController : MonoBehaviour
     private bool _moving = false;
     private Transform _currentPoint;
     private int _pathIndex = 0;
+    private bool _reachedEnd = false;
 
     void Start()
     {
@@ -36,13 +38,23 @@ public class GuideController : MonoBehaviour
                 _time += Time.deltaTime;
             }
         } */
-        if (!_moving)
+        if (!_moving && !_reachedEnd)
         {
             //if guide isn't moving, it means it reached the path point. 
             //when it reached the path point, change path point to the next point. 
             _pathIndex++;
+            
+            //don't go out of the list. Catch argumentException error
+            if (_pathIndex == _guidePath.pathPoints.Count)
+            {
+                //Set the path as the final point 
+                _pathIndex = _guidePath.pathPoints.Count - 1;
+                _reachedEnd = true;
+            }
+            
             _currentPoint =  _guidePath.pathPoints[_pathIndex];
             agent.SetDestination(_currentPoint.position);
+            
             //agent have a destination to go hence he will be moving
             _moving = true;
         }
