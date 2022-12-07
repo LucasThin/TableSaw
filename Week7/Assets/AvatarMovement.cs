@@ -11,12 +11,14 @@ public class AvatarMovement : MonoBehaviour
     [SerializeField] float degreesPerSecond = 80;
     private float _time = 0;
     private bool ifDodge;
+    public bool ifGreeting;
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
         ifDodge = false;
+        ifGreeting = false;
     }
 
     // Update is called once per frame
@@ -25,6 +27,8 @@ public class AvatarMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             anim.SetTrigger("Salute");
+            ifGreeting = true;
+
         }
         if (detectingState.state == movingState.moving)
         {
