@@ -36,7 +36,7 @@ public class GuideController : MonoBehaviour
         _currentPoint = _guidePath.pathPoints[_pathIndex];
     }
     
-    // Update is called once per frame
+    
     void Update()
     {
 /*
@@ -76,7 +76,7 @@ public class GuideController : MonoBehaviour
 
     private void IsWaiting()
     {
-        Debug.Log("Waiting for player to catch up");
+        //Debug.Log("Waiting for player to catch up");
         agent.SetDestination(transform.position);
         _moving = false;
 
