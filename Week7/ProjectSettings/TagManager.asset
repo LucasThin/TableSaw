@@ -6,6 +6,7 @@ TagManager:
   tags:
   - worker
   - manager
+  - PlayerBody
   layers:
   - Default
   - TransparentFX
