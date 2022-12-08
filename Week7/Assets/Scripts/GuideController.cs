@@ -19,7 +19,7 @@ public class GuideController : MonoBehaviour
     
     [SerializeField] AvatarMovement avatarMovement;
     [SerializeField] NavMeshAgent agent;
-    [SerializeField] private float _threshold = 0.5f;
+    [SerializeField] private float _threshold = 0.1f;
     [SerializeField] private GuidePath _guidePath;
     [SerializeField] private AvatarState _state = AvatarState.Guiding;
     [SerializeField] private CheckforPlayer _checkforPlayer;
@@ -32,6 +32,7 @@ public class GuideController : MonoBehaviour
     private Transform _currentPoint;
     private int _pathIndex = 0;
     private bool _reachedEnd = false;
+    private float _waitTime = 5.0f;
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class GuideController : MonoBehaviour
     {
         _animator.SetFloat("Speed", agent.velocity.magnitude);
 
-
+        /*
         if (_leaveBoxPoint.leaveBox)
         {
             _state = AvatarState.PutDown;
@@ -62,7 +63,7 @@ public class GuideController : MonoBehaviour
         else if (!_checkforPlayer._playerFollowing)
         {
             _state = AvatarState.Waiting;
-        }
+        }*/
         
         
         if (!_leaveBoxPoint.leaveBox)
@@ -119,14 +120,15 @@ public class GuideController : MonoBehaviour
         Debug.Log("Picking up");
         _animator.SetBool("Carrying", true);
         agent.SetDestination(_checkPickUp.pickUpPoint);
-        _checkPickUp.pickingUp = false;
-        StartCoroutine(PickUpDelay());
-    }
 
-    IEnumerator PickUpDelay()
-    {
-        yield return new WaitForSeconds(2);
-        _moving = false;
+        _waitTime -= Time.deltaTime;
+        if (_waitTime < 0.1f)
+        {
+            _checkPickUp.pickingUp = false;
+            _moving = false;
+            _waitTime = 2.0f;
+        }
+        
     }
 
     private void IsWaiting()
