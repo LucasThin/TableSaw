@@ -23,7 +23,10 @@ public class GuideController : MonoBehaviour
     [SerializeField] private GuidePath _guidePath;
     [SerializeField] private AvatarState _state = AvatarState.Guiding;
     [SerializeField] private CheckforPlayer _checkforPlayer;
-    
+    [SerializeField] private PickUpPoint _checkPickUp;
+    [SerializeField] private LeaveBoxPoint _leaveBoxPoint;
+    [SerializeField] private Animator _animator;
+
     private float _time = 0;
     private bool _moving = false;
     private Transform _currentPoint;
@@ -39,30 +42,54 @@ public class GuideController : MonoBehaviour
     
     void Update()
     {
-/*
-        if (avatarMovement.ifGreeting == true)
-        {
-            if (_time > 5f)
-            {
-                agent.SetDestination(new Vector3(-3.5f, 0f, 3.5f));
-            }
-            else if (_time < 5f)
-            {
-                _time += Time.deltaTime;
-            }
-        } */
+        _animator.SetFloat("Speed", agent.velocity.magnitude);
 
 
-        if (!_checkforPlayer._playerFollowing)
+        if (_leaveBoxPoint.leaveBox)
         {
-            _state = AvatarState.Waiting;
-            
-        } else if (_checkforPlayer._playerFollowing)
+            _state = AvatarState.PutDown;
+        }
+
+        if (_checkPickUp.pickingUp)
+        {
+            _state = AvatarState.PickUp;
+        }
+
+        if (_checkforPlayer._playerFollowing)
         {
             _state = AvatarState.Guiding;
         }
+        else if (!_checkforPlayer._playerFollowing)
+        {
+            _state = AvatarState.Waiting;
+        }
+        
+        
+        if (!_leaveBoxPoint.leaveBox)
+        {
+            if (!_checkPickUp.pickingUp)
+            {
+                if (_checkforPlayer._playerFollowing)
+                {
+                    _state = AvatarState.Guiding;
+                }
+                else
+                {
+                    _state = AvatarState.Waiting;
+                }
+            }
+            else
+            {
+                _state = AvatarState.PickUp;
+            }
 
-            
+        }
+        else
+        {
+            _state = AvatarState.PutDown;
+        } 
+       
+        
         if (_state == AvatarState.Guiding)
         {
             Guiding();
@@ -70,7 +97,37 @@ public class GuideController : MonoBehaviour
         } else if (_state == AvatarState.Waiting)
         {
             IsWaiting();
+        } else if (_state == AvatarState.PickUp)
+        {
+            PickingUp();
+        } else if (_state == AvatarState.PutDown)
+        {
+            LeavingBox();
         }
+        
+    }
+
+    private void LeavingBox()
+    {
+        agent.SetDestination(_leaveBoxPoint.leaveBoxPoint);
+        _moving = false;
+
+    }
+
+    private void PickingUp()
+    {
+        Debug.Log("Picking up");
+        _animator.SetBool("Carrying", true);
+        agent.SetDestination(_checkPickUp.pickUpPoint);
+        StartCoroutine(PickUpDelay());
+    }
+
+    IEnumerator PickUpDelay()
+    {
+        _moving = false;
+        yield return new WaitForSeconds(2);
+        
+        _checkPickUp.pickingUp = false;
         
     }
 
@@ -105,6 +162,7 @@ public class GuideController : MonoBehaviour
     {
         //when it reached the path point, change path point to the next point. 
         _pathIndex++;
+        Debug.Log(_pathIndex);
             
         //don't go out of the list. Catch argumentException error
         if (_pathIndex == _guidePath.pathPoints.Count)
