@@ -119,16 +119,14 @@ public class GuideController : MonoBehaviour
         Debug.Log("Picking up");
         _animator.SetBool("Carrying", true);
         agent.SetDestination(_checkPickUp.pickUpPoint);
+        _checkPickUp.pickingUp = false;
         StartCoroutine(PickUpDelay());
     }
 
     IEnumerator PickUpDelay()
     {
-        _moving = false;
         yield return new WaitForSeconds(2);
-        
-        _checkPickUp.pickingUp = false;
-        
+        _moving = false;
     }
 
     private void IsWaiting()
