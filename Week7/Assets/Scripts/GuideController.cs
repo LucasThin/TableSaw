@@ -16,8 +16,6 @@ public class GuideController : MonoBehaviour
         
     }
     
-    
-    [SerializeField] AvatarMovement avatarMovement;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] private float _threshold = 0.1f;
     [SerializeField] private GuidePath _guidePath;
@@ -136,7 +134,6 @@ public class GuideController : MonoBehaviour
         //Debug.Log("Waiting for player to catch up");
         agent.SetDestination(transform.position);
         _moving = false;
-
     }
 
     // Check if guide is moving or not and setting path point for it
