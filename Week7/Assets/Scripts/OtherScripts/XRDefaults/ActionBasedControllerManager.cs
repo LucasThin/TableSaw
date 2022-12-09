@@ -117,7 +117,7 @@ public class ActionBasedControllerManager : MonoBehaviour
         set => m_BaseControllerGameObject = value;
     }
     
-    [SerializeField, FormerlySerializedAs("m_TeleportControllerGO")]
+   // [SerializeField, FormerlySerializedAs("m_TeleportControllerGO")]
     [Tooltip("The teleport controller GameObject, used for changing default settings on its components during state transitions.")]
     GameObject m_TeleportControllerGameObject;
     /// <summary>
