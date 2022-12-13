@@ -42,26 +42,6 @@ public class GuideController : MonoBehaviour
     void Update()
     {
         _animator.SetFloat("Speed", agent.velocity.magnitude);
-
-        /*
-        if (_leaveBoxPoint.leaveBox)
-        {
-            _state = AvatarState.PutDown;
-        }
-
-        if (_checkPickUp.pickingUp)
-        {
-            _state = AvatarState.PickUp;
-        }
-
-        if (_checkforPlayer._playerFollowing)
-        {
-            _state = AvatarState.Guiding;
-        }
-        else if (!_checkforPlayer._playerFollowing)
-        {
-            _state = AvatarState.Waiting;
-        }*/
         
         
         if (!_leaveBoxPoint.leaveBox)
