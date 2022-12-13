@@ -9,10 +9,11 @@ public class CalculateDistance : MonoBehaviour
     [SerializeField] private List<Transform> _haptics = new List<Transform>();
     public List<float> distances = new List<float>();
 
-    [SerializeField] private GameObject AlertModel;
-    [SerializeField] private GameObject Model;
-    [SerializeField] private GameObject Avatar;
-    [SerializeField] private GameObject AlertPlayer;
+    [SerializeField] private GameObject alertWorker;
+    [SerializeField] private GameObject normalWorker;
+    [SerializeField] private GameObject Guide;
+    [SerializeField] private GameObject alertPlayer;
+    [SerializeField] private GameObject normalPlayer;
     [SerializeField] private GameObject AlertLight;
     [SerializeField] private ArduinoVest _arduinoVest;
     private int x = 0;
@@ -23,22 +24,22 @@ public class CalculateDistance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AlertModel.SetActive(false);
-        AlertPlayer.SetActive(false);
+        alertWorker.SetActive(false);
+        alertPlayer.SetActive(false);
         AlertLight.SetActive(false);
-        Avatar.SetActive(false);
-        Model.SetActive(true);
+        Guide.SetActive(false);
+        normalWorker.SetActive(true);
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             //Update all distances between
-            AlertModel.SetActive(true);
-            AlertPlayer.SetActive(true);
-            Avatar.SetActive(true);
+            alertWorker.SetActive(true);
+            alertPlayer.SetActive(true);
+            Guide.SetActive(true);
             AlertLight.SetActive(true);
-            Model.SetActive(false);
+            normalWorker.SetActive(false);
 
             for (int y = 0; y<_haptics.Count; y++)
             {
@@ -77,11 +78,11 @@ public class CalculateDistance : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _removeList = true;
-        AlertModel.SetActive(false);
-        AlertPlayer.SetActive(false);
-        Avatar.SetActive(false);
+        alertWorker.SetActive(false);
+        alertPlayer.SetActive(false);
+        Guide.SetActive(false);
         AlertLight.SetActive(false);
-        Model.SetActive(true);
+        normalWorker.SetActive(true);
     }
 
     private void Update()
