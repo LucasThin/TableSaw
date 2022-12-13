@@ -35,7 +35,7 @@ public class AiController : MonoBehaviour
         {
             agent.SetDestination(RandomNavMeshLocation());
         }
-    
+
     }
     
     public Vector3 RandomNavMeshLocation()
