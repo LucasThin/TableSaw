@@ -18,7 +18,7 @@ public class GuideControllers : MonoBehaviour
     [SerializeField] private GuidePath _guidePath;
     [SerializeField] private AvatarState _state = AvatarState.Routing;
     [SerializeField] private CheckforPlayer _checkforPlayer;
-    
+    [SerializeField] private Animator _animator;
 
     private bool _reachedPoint = false;
     private int _pathIndex = 0;
@@ -33,6 +33,7 @@ public class GuideControllers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _animator.SetFloat("Speed", agent.velocity.magnitude);
         _debug = Vector3.Distance(transform.position, _currentPoint.position);
         //---- check if avatar reaching point ----
         if (Vector3.Distance(transform.position, _currentPoint.position) < _threshold)
