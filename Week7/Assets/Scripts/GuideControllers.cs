@@ -13,26 +13,36 @@ public class GuideControllers : MonoBehaviour
     }
     // Start is called before the first frame update
 
-    [SerializeField] private NavMeshAgent _agent;
-    [SerializeField] NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float _threshold = 0.1f;
     [SerializeField] private GuidePath _guidePath;
     [SerializeField] private AvatarState _state = AvatarState.Routing;
     [SerializeField] private CheckforPlayer _checkforPlayer;
-    [SerializeField] private Animator _animator;
-
-    private bool _reachedPoint;
-    private int _pathIndex = 0;
     
+
+    private bool _reachedPoint = false;
+    private int _pathIndex = 0;
+    private Transform _currentPoint;
+    public float _debug;
+
     void Start()
     {
-        
+        _currentPoint = _guidePath.pathPoints[_pathIndex];
     }
 
     // Update is called once per frame
     void Update()
     {
-    
+        _debug = Vector3.Distance(transform.position, _currentPoint.position);
+        //---- check if avatar reaching point ----
+        if (Vector3.Distance(transform.position, _currentPoint.position) < _threshold)
+        {
+            //move to the path position
+            agent.Warp(_currentPoint.position);
+            _reachedPoint = true;
+        }
+        
+        
         //----Assigning avatar states based on conditions----
         
         //if it's near the destination
@@ -67,27 +77,41 @@ public class GuideControllers : MonoBehaviour
         {
             Waiting();
         }
-        
-        
-        
-       
-        
+
     }
     
     private void Routing()
     {
-        _pathIndex++;
-        Debug.Log(_pathIndex);
+        //make sure to not go outside of list
+        if (_pathIndex < _guidePath.pathPoints.Count)
+        {
+            _pathIndex++;
+            Debug.Log(_pathIndex);  
+        }
+        else
+        {
+            _pathIndex = _guidePath.pathPoints.Count - 1;
+        }
+        
+        //set destination of agent to the path 
+        _currentPoint = _guidePath.pathPoints[_pathIndex];
+
     }
 
     private void Waiting()
     {
-       
+        //pause the agent
+        agent.isStopped = true;
     }
     
 
     private void Guiding()
     {
-       
+        //keep the destination
+        agent.SetDestination(_currentPoint.position);
+        
+        //resume the agent
+        agent.isStopped = false;
+        
     }
 }
