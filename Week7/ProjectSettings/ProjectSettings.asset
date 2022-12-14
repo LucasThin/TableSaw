@@ -672,7 +672,11 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
 <<<<<<< HEAD
+<<<<<<< HEAD
     1: ENABLE_INPUT_SYSTEM_TESTFRAMEWORK_TESTS;TERRAINPACKAGE_EXIST;READY_PLAYER_ME;STARTER_ASSETS_PACKAGES_CHECKED
+=======
+    1: ENABLE_INPUT_SYSTEM_TESTFRAMEWORK_TESTS;TERRAINPACKAGE_EXIST
+>>>>>>> parent of b090d671 (added ready player me avatar)
 =======
     1: ENABLE_INPUT_SYSTEM_TESTFRAMEWORK_TESTS;TERRAINPACKAGE_EXIST
 >>>>>>> parent of b090d671 (added ready player me avatar)
