@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,16 +20,19 @@ public class GuideControllers : MonoBehaviour
     [SerializeField] private AvatarState _state = AvatarState.Routing;
     [SerializeField] private CheckforPlayer _checkforPlayer;
     [SerializeField] private Animator _animator;
+    [SerializeField] private Transform _camera;
 
     private bool _reachedPoint = false;
-    private int _pathIndex = 0;
+    public int _pathIndex = 0;
     public Transform _currentPoint;
     public float _debug;
     private bool routingCalled = false;
+    private bool droppingCalled = false;
     void Start()
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
         _animator.SetBool("Carrying",false);
+        _camera = Camera.current.transform;
     }
 
     // Update is called once per frame
@@ -98,7 +102,7 @@ public class GuideControllers : MonoBehaviour
         if (_pathIndex < _guidePath.pathPoints.Count)
         {
             _pathIndex++;
-            Debug.Log(_pathIndex);  
+           
         }
         else if (_pathIndex >= _guidePath.pathPoints.Count)
         {
@@ -114,17 +118,31 @@ public class GuideControllers : MonoBehaviour
             Carrying();
         } else if (_pathIndex == 2)
         {
-            Dropping();
+            if (!droppingCalled)
+            {
+                Dropping();
+
+                droppingCalled = true;
+            } else if (droppingCalled)
+            {
+                Ending();
+            }
+            
         }
         
         
     }
 
+    private void Ending()
+    {
+        transform.LookAt(_camera);
+    }
+
     private void Dropping()
     {
-        Debug.Log("Carrying");
+        Debug.Log("DroppingOff");
         //Rotate towards the box
-        transform.rotation = _guidePath.pathPoints[0].rotation;
+        transform.rotation = _guidePath.pathPoints[1].rotation;
 
         //play carrying animation then carry pose
         // _animator.Play("Carrying");
