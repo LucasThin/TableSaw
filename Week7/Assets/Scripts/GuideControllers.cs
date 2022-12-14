@@ -112,9 +112,24 @@ public class GuideControllers : MonoBehaviour
         if (_pathIndex == 1)
         {
             Carrying();
+        } else if (_pathIndex == 2)
+        {
+            Dropping();
         }
         
         
+    }
+
+    private void Dropping()
+    {
+        Debug.Log("Carrying");
+        //Rotate towards the box
+        transform.rotation = _guidePath.pathPoints[0].rotation;
+
+        //play carrying animation then carry pose
+        // _animator.Play("Carrying");
+        _animator.SetBool("Carrying",false);
+
     }
 
     private void Carrying()
@@ -124,14 +139,14 @@ public class GuideControllers : MonoBehaviour
         transform.rotation = _guidePath.pathPoints[0].rotation;
 
         //play carrying animation then carry pose
-        _animator.Play("Carrying");
-       // _animator.SetBool("Carrying",true);
+       // _animator.Play("Carrying");
+       _animator.SetBool("Carrying",true);
 
         //set active to box
         
         //set destination
         agent.SetDestination(_currentPoint.position);
-        _animator.Play("CarryWalking");
+       // _animator.Play("CarryWalking");
 
     }
 
