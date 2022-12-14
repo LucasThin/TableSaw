@@ -32,7 +32,7 @@ public class GuideControllers : MonoBehaviour
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
         _animator.SetBool("Carrying",false);
-        _camera = Camera.current.transform;
+        
     }
 
     // Update is called once per frame
@@ -135,14 +135,14 @@ public class GuideControllers : MonoBehaviour
 
     private void Ending()
     {
-        transform.LookAt(_camera);
+        agent.transform.LookAt(_camera);
     }
 
     private void Dropping()
     {
         Debug.Log("DroppingOff");
         //Rotate towards the box
-        transform.rotation = _guidePath.pathPoints[1].rotation;
+        agent.transform.rotation = _guidePath.pathPoints[1].rotation;
 
         //play carrying animation then carry pose
         // _animator.Play("Carrying");
@@ -154,7 +154,7 @@ public class GuideControllers : MonoBehaviour
     {
         Debug.Log("Carrying");
         //Rotate towards the box
-        transform.rotation = _guidePath.pathPoints[0].rotation;
+        agent.transform.rotation = _guidePath.pathPoints[0].rotation;
 
         //play carrying animation then carry pose
        // _animator.Play("Carrying");
