@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,15 +7,24 @@ public class Greeting : MonoBehaviour
 {
     [SerializeField] private GameObject _guideController;
     [SerializeField] private Animator _guideAnimator;
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private float _animationTime = 5f;
+    
+    private void Awake()
     {
-        _guideAnimator.SetTrigger("Salute");
+        _guideController.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         
+        _guideAnimator.SetTrigger("Salute");
+        Invoke("StartAnimation", _animationTime);
+    }
+
+    void StartAnimation()
+    {
+        Debug.Log("start animating");
+        _guideController.SetActive(true);
     }
 }
