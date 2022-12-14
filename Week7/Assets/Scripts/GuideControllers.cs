@@ -28,6 +28,7 @@ public class GuideControllers : MonoBehaviour
     void Start()
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
+        _animator.SetBool("Carrying",false);
     }
 
     // Update is called once per frame
@@ -124,11 +125,14 @@ public class GuideControllers : MonoBehaviour
 
         //play carrying animation then carry pose
         _animator.Play("Carrying");
+       // _animator.SetBool("Carrying",true);
 
         //set active to box
         
         //set destination
         agent.SetDestination(_currentPoint.position);
+        _animator.Play("CarryWalking");
+
     }
 
     private void Waiting()
