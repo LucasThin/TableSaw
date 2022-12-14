@@ -4,7 +4,6 @@
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuideControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuideControllers.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/BackgroundMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arduino/Arduino2Unity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckforPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Greeting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GuideControllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToggleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@10.10.1/Editor/AssetPostProcessors/FBXMaterialDescriptionPreprocessor.cs" root0="SKIP_HIGHLIGHTING" />
