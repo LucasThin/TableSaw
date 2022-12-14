@@ -671,7 +671,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: ENABLE_INPUT_SYSTEM_TESTFRAMEWORK_TESTS;TERRAINPACKAGE_EXIST;READY_PLAYER_ME;STARTER_ASSETS_PACKAGES_CHECKED
+    1: ENABLE_INPUT_SYSTEM_TESTFRAMEWORK_TESTS;TERRAINPACKAGE_EXIST;READY_PLAYER_ME
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
