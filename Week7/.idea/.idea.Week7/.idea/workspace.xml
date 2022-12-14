@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Avatars/6398271d5c124607cf9df9ab/6398271d5c124607cf9df9ab.glb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Avatars/6398271d5c124607cf9df9ab/6398271d5c124607cf9df9ab.glb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/shelf.glb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/shelf.glb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/WebView/Resources/Partner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/WebView/Resources/Partner.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/forklift_truck.glb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/forklift_truck.glb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warehouse_building.glb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/warehouse_building.glb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warehouse_shelving_unit.glb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/warehouse_shelving_unit.glb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/labluma.glb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/labluma.glb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Crystals.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Crystals.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Default Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Default Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Default.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Default.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Mat 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Mat 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Magic Light Probes/Examples/Materials/Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuideController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuideController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -21,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/BackgroundMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arduino/Arduino2Unity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckforPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GuideControllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickUpPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToggleUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,6 +109,7 @@
       <workItem from="1670300238839" duration="5378000" />
       <workItem from="1670440430057" duration="14285000" />
       <workItem from="1670532673477" duration="8576000" />
+      <workItem from="1671015832324" duration="1830000" />
     </task>
     <servers />
   </component>

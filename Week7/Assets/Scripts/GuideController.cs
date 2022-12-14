@@ -112,8 +112,8 @@ public class GuideController : MonoBehaviour
     private void IsWaiting()
     {
         //Debug.Log("Waiting for player to catch up");
-        agent.SetDestination(transform.position);
-        _moving = false;
+        //agent.SetDestination(transform.position);
+        //_moving = false;
     }
 
     // Check if guide is moving or not and setting path point for it
