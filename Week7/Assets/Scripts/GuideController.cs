@@ -26,7 +26,7 @@ public class GuideController : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private float _time = 0;
-    private bool _moving = false;
+    private bool _reached = false;
     private Transform _currentPoint;
     private int _pathIndex = 0;
     private bool _reachedEnd = false;
@@ -89,7 +89,7 @@ public class GuideController : MonoBehaviour
     private void LeavingBox()
     {
         agent.SetDestination(_leaveBoxPoint.leaveBoxPoint);
-        _moving = false;
+        //_moving = false;
 
     }
 
@@ -103,7 +103,7 @@ public class GuideController : MonoBehaviour
         if (_waitTime < 0.1f)
         {
             _checkPickUp.pickingUp = false;
-            _moving = false;
+            //_moving = false;
             _waitTime = 2.0f;
         }
         
@@ -113,12 +113,30 @@ public class GuideController : MonoBehaviour
     {
         //Debug.Log("Waiting for player to catch up");
         agent.SetDestination(transform.position);
-        _moving = false;
+        //_moving = false;
     }
 
     // Check if guide is moving or not and setting path point for it
     private void Guiding()
     {
+
+        if (Vector3.Distance(transform.position, _currentPoint.position) > _threshold)
+        {
+            _reached = false;
+            agent.SetDestination(_currentPoint.position);
+        }
+
+        if (Vector3.Distance(transform.position, _currentPoint.position) < _threshold)
+        {
+            _reached = true;
+            if (_reached)
+            {
+                SetNextDestination();
+            }
+            agent.SetDestination(_currentPoint.position);
+        } 
+        
+        /*
         //if guide isn't moving and has not reached the end, it means it reached the path point. 
         if (!_moving && !_reachedEnd)
         {
@@ -132,13 +150,14 @@ public class GuideController : MonoBehaviour
         if (_moving && Vector3.Distance(transform.position, _currentPoint.position) < _threshold)
         {
             _moving = false;
-        }
+        } */
     }
 
     private void SetNextDestination()
     {
         //when it reached the path point, change path point to the next point. 
         _pathIndex++;
+        _reached = false;
         Debug.Log(_pathIndex);
             
         //don't go out of the list. Catch argumentException error
