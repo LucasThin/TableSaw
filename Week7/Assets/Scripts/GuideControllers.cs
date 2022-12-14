@@ -106,7 +106,28 @@ public class GuideControllers : MonoBehaviour
 
         //set destination of agent to the path 
         _currentPoint = _guidePath.pathPoints[_pathIndex];
-        //keep the destination
+        
+        //play carrying function if path index is 1
+        if (_pathIndex == 1)
+        {
+            Carrying();
+        }
+        
+        
+    }
+
+    private void Carrying()
+    {
+        Debug.Log("Carrying");
+        //Rotate towards the box
+        transform.rotation = _guidePath.pathPoints[0].rotation;
+
+        //play carrying animation then carry pose
+        _animator.Play("Carrying");
+
+        //set active to box
+        
+        //set destination
         agent.SetDestination(_currentPoint.position);
     }
 
