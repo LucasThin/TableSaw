@@ -22,9 +22,9 @@ public class GuideControllers : MonoBehaviour
 
     private bool _reachedPoint = false;
     private int _pathIndex = 0;
-    private Transform _currentPoint;
+    public Transform _currentPoint;
     public float _debug;
-
+    private bool routingCalled = false;
     void Start()
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
@@ -40,6 +40,10 @@ public class GuideControllers : MonoBehaviour
             //move to the path position
             agent.Warp(_currentPoint.position);
             _reachedPoint = true;
+        }
+        else
+        {
+            _reachedPoint = false;
         }
         
         
@@ -70,7 +74,13 @@ public class GuideControllers : MonoBehaviour
 
         if (_state == AvatarState.Routing)
         {
-            Routing();
+            if (!routingCalled)
+            {
+                Routing();
+
+                routingCalled = true;
+            }
+
         }
 
         if (_state == AvatarState.Waiting)
@@ -88,18 +98,21 @@ public class GuideControllers : MonoBehaviour
             _pathIndex++;
             Debug.Log(_pathIndex);  
         }
-        else
+        else if (_pathIndex >= _guidePath.pathPoints.Count)
         {
             _pathIndex = _guidePath.pathPoints.Count - 1;
         }
-        
+
         //set destination of agent to the path 
         _currentPoint = _guidePath.pathPoints[_pathIndex];
-
+        //keep the destination
+        agent.SetDestination(_currentPoint.position);
     }
 
     private void Waiting()
     {
+        routingCalled = false;
+        
         //pause the agent
         agent.isStopped = true;
     }
@@ -107,6 +120,9 @@ public class GuideControllers : MonoBehaviour
 
     private void Guiding()
     {
+        routingCalled = false;
+        
+        
         //keep the destination
         agent.SetDestination(_currentPoint.position);
         
