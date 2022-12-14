@@ -31,6 +31,7 @@ public class GuideController : MonoBehaviour
     private int _pathIndex = 0;
     private bool _reachedEnd = false;
     private float _waitTime = 5.0f;
+    private bool _pickup = false;
 
     void Start()
     {
@@ -95,37 +96,52 @@ public class GuideController : MonoBehaviour
 
     private void PickingUp()
     {
-        Debug.Log("Picking up");
-        _animator.SetBool("Carrying", true);
-        agent.SetDestination(_checkPickUp.pickUpPoint);
+        _pickup = true;
 
-        _waitTime -= Time.deltaTime;
-        if (_waitTime < 0.1f)
+        if (_pickup)
         {
-            _checkPickUp.pickingUp = false;
-            //_moving = false;
-            _waitTime = 2.0f;
+            agent.isStopped = true;
+            Debug.Log("pause");
+            Invoke("ResumeMovement", 4);
+            _pickup = false;
         }
-        
-    }
 
+    }
+    
+    
+    
+
+    // Function that will be called after 4 seconds to resume movement
+    void ResumeMovement()
+    {
+        Debug.Log("Resume");
+        // Resume movement to the new destination
+        agent.isStopped = false;
+        _reached = true;
+        if (_reached)
+        {
+            SetNextDestination();
+        }
+    }
+  
     private void IsWaiting()
     {
-        //Debug.Log("Waiting for player to catch up");
         agent.SetDestination(transform.position);
-        //_moving = false;
-    }
 
-    // Check if guide is moving or not and setting path point for it
+    }
+    
     private void Guiding()
     {
 
+        // if the person haven't reached the position
         if (Vector3.Distance(transform.position, _currentPoint.position) > _threshold)
         {
             _reached = false;
             agent.SetDestination(_currentPoint.position);
         }
 
+        /*
+        // if person reached the position
         if (Vector3.Distance(transform.position, _currentPoint.position) < _threshold)
         {
             _reached = true;
@@ -136,7 +152,7 @@ public class GuideController : MonoBehaviour
             agent.SetDestination(_currentPoint.position);
         } 
         
-        /*
+        
         //if guide isn't moving and has not reached the end, it means it reached the path point. 
         if (!_moving && !_reachedEnd)
         {

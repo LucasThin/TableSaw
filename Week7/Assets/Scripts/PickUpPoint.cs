@@ -18,8 +18,13 @@ public class PickUpPoint : MonoBehaviour
         if (other.gameObject.CompareTag("Finish"))
         {
             pickingUp = true;
-            Debug.Log("Picked Up Box");
+            Debug.Log("Enter Pick up Trigger");
             
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        pickingUp = false;
     }
 }

@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GuideController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GuideController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickUpPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickUpPoint.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
       <workItem from="1670300238839" duration="5378000" />
       <workItem from="1670440430057" duration="14285000" />
       <workItem from="1670532673477" duration="8576000" />
-      <workItem from="1670976761417" duration="1583000" />
+      <workItem from="1670976761417" duration="7394000" />
     </task>
     <servers />
   </component>
