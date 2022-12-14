@@ -43,31 +43,15 @@ public class GuideController : MonoBehaviour
     void Update()
     {
         _animator.SetFloat("Speed", agent.velocity.magnitude);
-        
-        
-        if (!_leaveBoxPoint.leaveBox)
-        {
-            if (!_checkPickUp.pickingUp)
-            {
-                if (_checkforPlayer._playerFollowing)
-                {
-                    _state = AvatarState.Guiding;
-                }
-                else
-                {
-                    _state = AvatarState.Waiting;
-                }
-            }
-            else
-            {
-                _state = AvatarState.PickUp;
-            }
 
+        if (_checkforPlayer._playerFollowing)
+        {
+            _state = AvatarState.Guiding;
         }
         else
         {
-            _state = AvatarState.PutDown;
-        } 
+            _state = AvatarState.Waiting;
+        }
        
         
         if (_state == AvatarState.Guiding)
@@ -100,29 +84,21 @@ public class GuideController : MonoBehaviour
 
         if (_pickup)
         {
-            agent.isStopped = true;
-            Debug.Log("pause");
-            Invoke("ResumeMovement", 4);
-            _pickup = false;
+            
         }
-
+        //Stops the agent from moving.
+        agent.SetDestination(transform.position);
+        Debug.Log("picking up");
+    
+        //play animation of turning and then carrying something then turn back carry. 
+        
+        //set active to hologram box
+        
+        //set the index of the next path point
+        
+        // set destination to go to destination point
     }
     
-    
-    
-
-    // Function that will be called after 4 seconds to resume movement
-    void ResumeMovement()
-    {
-        Debug.Log("Resume");
-        // Resume movement to the new destination
-        agent.isStopped = false;
-        _reached = true;
-        if (_reached)
-        {
-            SetNextDestination();
-        }
-    }
   
     private void IsWaiting()
     {
