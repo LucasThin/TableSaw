@@ -23,6 +23,19 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Greeting _greeting;
     [SerializeField] private GuideAudioManager _guideAudioManager;
 
+    private void Start()
+    {
+        userIDOff();
+        timePanelOff();
+        guidingDropoffOff();
+        currentDropoffOff();
+        guidingPickupOff();
+        currentPickupOff();
+        conveyerBeltOff();
+        moveLeftOff();
+        moveRightOff();
+    }
+
     private void Update()
     {
         if (_greeting)
