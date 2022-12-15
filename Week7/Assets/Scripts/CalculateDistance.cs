@@ -35,7 +35,7 @@ public class CalculateDistance : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerBody"))
+        if (other.gameObject.CompareTag("Player"))
         {
             //Update all distances between
             alertWorker.SetActive(true);
@@ -55,7 +55,7 @@ public class CalculateDistance : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerBody"))
+        if (other.gameObject.CompareTag("Player"))
         {
             //On Trigger enter, start calculating the distance function
             CalculatingDistance();
@@ -100,11 +100,38 @@ public class CalculateDistance : MonoBehaviour
             _removeList = false;
         }
 
-        if (_frontLeft || _backLeft )
+        if (_frontLeft || _backLeft || _left)
         {
-            _uiManager.moveLeftOn();
             _uiManager.moveLeftOff();
+            _uiManager.moveRightOn();
         }
+
+        if (_frontRight || _backRight || _right)
+        {
+            _uiManager.moveRightOff();
+            _uiManager.moveLeftOn();
+        }
+
+        if (_frontLeft || _frontRight)
+        {
+            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[5]);
+        }
+        
+        if (_backLeft || _backRight)
+        {
+            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[4]);
+        }
+
+        if (_left)
+        {
+            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[6]);
+        }
+
+        if (_right)
+        {
+            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[7]);
+        }
+        
     }
     
     private void FindLowestDistance()
