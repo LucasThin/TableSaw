@@ -14,6 +14,8 @@ public class GuideAudioManager : MonoBehaviour
     [SerializeField] private List<AudioClip> _audioClips;
 
     private bool _audioPlayed = false;
+    private bool _afterPickUp = false;
+    public bool _enterConveyerBelt = false;
     
     private void Update()
     {
@@ -33,12 +35,29 @@ public class GuideAudioManager : MonoBehaviour
 
     public void AfterPickingUp()
     {
-        if (_audioPlayed)
+        if (!_afterPickUp)
         {
             SoundManager.Instance.PlayLine(_audioClips[1]);
             Debug.Log("afterboxpickup line");
 
-            _audioPlayed = false;
+            _afterPickUp = true;
         }
+    }
+
+    public void ApproachConveyorBelt()
+    {
+        if (!_enterConveyerBelt)
+        {
+            SoundManager.Instance.PlayLine(_audioClips[2]);
+            Debug.Log("Enter Conveyer belt");
+
+            _enterConveyerBelt = true;
+
+        }
+    }
+
+    public void ResetBelt()
+    {
+        _enterConveyerBelt = false;
     }
 }

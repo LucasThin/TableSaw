@@ -9,7 +9,7 @@ public class Greeting : MonoBehaviour
     [SerializeField] private Animator _guideAnimator;
 
     [SerializeField] private float _guidingTime = 5f;
-    [SerializeField] private float _greetingTime = 0f;
+  //  [SerializeField] private float _greetingTime = 0f;
 
     private void Awake()
     {

@@ -21,6 +21,7 @@ public class GuideControllers : MonoBehaviour
     [SerializeField] private CheckforPlayer _checkforPlayer;
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _camera;
+    [SerializeField] private GameObject _GuideBox;
 
     private bool _reachedPoint = false;
     private int _pathIndex = 0;
@@ -34,6 +35,7 @@ public class GuideControllers : MonoBehaviour
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
         _animator.SetBool("Carrying",false);
+        _GuideBox.SetActive(false);
         
     }
 
@@ -149,6 +151,9 @@ public class GuideControllers : MonoBehaviour
         //play carrying animation then carry pose
         // _animator.Play("Carrying");
         _animator.SetBool("Carrying",false);
+        
+        //place box 
+        _GuideBox.SetActive(false);
 
     }
 
@@ -164,7 +169,7 @@ public class GuideControllers : MonoBehaviour
        _animator.SetBool("Carrying",true);
 
         //set active to box
-        
+        _GuideBox.SetActive(true);
         //set destination
         agent.SetDestination(_currentPoint.position);
        // _animator.Play("CarryWalking");
