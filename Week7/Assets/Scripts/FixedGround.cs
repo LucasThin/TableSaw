@@ -17,7 +17,7 @@ public class FixedGround : MonoBehaviour
     {
         //Hip's position
         Vector3 pos = player.transform.position;
-        this.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        this.transform.position = player.transform.position;
         Quaternion myRotation = Quaternion.identity;
         myRotation.eulerAngles = new Vector3(0f, player.transform.eulerAngles.y, 0f);
         this.transform.rotation = Quaternion.Slerp(transform.rotation, myRotation, 2000);
