@@ -14,7 +14,7 @@ public class GuideAudioManager : MonoBehaviour
     [SerializeField] private List<AudioClip> _audioClips;
 
     private bool _audioPlayed = false;
-    private bool _afterPickUp = false;
+    public bool _afterPickUp = false;
     public bool _enterConveyerBelt = false;
 
     private AudioSource[] allAudioSources;

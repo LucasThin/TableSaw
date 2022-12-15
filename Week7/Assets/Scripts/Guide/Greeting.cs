@@ -9,6 +9,8 @@ public class Greeting : MonoBehaviour
     [SerializeField] private Animator _guideAnimator;
 
     [SerializeField] private float _guidingTime = 5f;
+
+    public bool _greeting = false;
   //  [SerializeField] private float _greetingTime = 0f;
 
     private void Awake()
@@ -19,7 +21,9 @@ public class Greeting : MonoBehaviour
     void Start()
     {
         _guideAnimator.SetTrigger("Salute");
+        _greeting = true;
         Invoke("StartGuiding", _guidingTime);
+        
     }
 
 
@@ -27,5 +31,6 @@ public class Greeting : MonoBehaviour
     {
         Debug.Log("start animating");
         _guideController.SetActive(true);
+        _greeting = false;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +18,39 @@ public class UIManager : MonoBehaviour
         moveLeft, //move left alert UI
         moveRight, //move right alert UI
         conveyerBelt; //move right alert UI
-    
-    
+
+    [SerializeField] private GuideControllers _guideControllers;
+    [SerializeField] private Greeting _greeting;
+    [SerializeField] private GuideAudioManager _guideAudioManager;
+
+    private void Update()
+    {
+        if (_greeting)
+        {
+            userIDOn();
+            timePanelOn();
+        }
+
+        if (_guideControllers._guidingfirst)
+        {
+            userIDOff();
+            guidingPickupOn();
+            currentPickupOn();
+        }
+
+        if (_guideControllers._carrying)
+        {
+            guidingPickupOff();
+            currentPickupOff();
+        }
+
+        if (_guideAudioManager._afterPickUp)
+        {
+            guidingDropoffOn();
+            currentDropoffOn();
+        }
+    }
+
     public void timePanelOn()
     {
         timePanel.SetActive(true);
@@ -72,35 +104,7 @@ public class UIManager : MonoBehaviour
     {
         currentDropoff.SetActive(false);
     }
-    
-/*    public void dropoffDoneOn()
-    {
-        dropoffDone.SetActive(true);
-    }
-    public void dropoffDoneOff()
-    {
-        dropoffDone.SetActive(false);
-    }
-    
-    public void updateCurrentOn()
-    {
-        updateCurrent.SetActive(true);
-    }
-    public void updateCurrentOff()
-    {
-        updateCurrent.SetActive(false);
-    }
-    
-    public void updateguidingOn()
-    {
-        updateguiding.SetActive(true);
-    }
-    public void updateguidingOff()
-    {
-        updateguiding.SetActive(false);
-    }
-    */
-    
+
     public void moveRightOn()
     {
         moveRight.SetActive(true);
