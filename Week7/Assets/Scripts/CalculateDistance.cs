@@ -8,7 +8,7 @@ public class CalculateDistance : MonoBehaviour
     public HapticSensors _hapticSensors;
     [SerializeField] private List<Transform> _haptics = new List<Transform>();
     public List<float> distances = new List<float>();
-    public bool _frontLeft, _frontRight, _left, _right, _backLeft, _backRight;
+    public bool _frontLeft = false, _frontRight = false, _left = false, _right = false, _backLeft = false, _backRight = false;
 
     [SerializeField] private GameObject alertWorker;
     [SerializeField] private GameObject normalWorker;
@@ -22,6 +22,7 @@ public class CalculateDistance : MonoBehaviour
     private int x = 0;
 
     private bool _removeList;
+    private bool _playedInfront = false, _playedBehind = false, _playedLeft = false, _playedRight = false;
 
 
     // Start is called before the first frame update
@@ -114,22 +115,62 @@ public class CalculateDistance : MonoBehaviour
 
         if (_frontLeft || _frontRight)
         {
-            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[5]);
+
+            if (!_playedInfront)
+            {
+                _guideAudioManager.StopAllAudio();
+                SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[5]);
+                _playedInfront = true;
+            }
+            else
+            {
+                _playedInfront = false;
+            }
+            
         }
         
         if (_backLeft || _backRight)
         {
-            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[4]);
+            if (!_playedBehind)
+            {
+                _guideAudioManager.StopAllAudio();
+                SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[4]);
+                _playedBehind = true;
+            }
+            else
+            {
+                _playedBehind = false;
+            }
+            
         }
 
         if (_left)
         {
-            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[6]);
+            if (!_playedLeft)
+            {
+                _guideAudioManager.StopAllAudio();
+                SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[6]);
+                _playedLeft = true;
+            }
+            else
+            {
+                _playedLeft = false;
+            }
         }
 
         if (_right)
         {
-            SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[7]);
+            if (!_playedLeft)
+            {
+                _guideAudioManager.StopAllAudio();
+                SoundManager.Instance.PlayLine(_guideAudioManager._audioClips[7]);
+                _playedRight = true;
+            }
+            else
+            {
+                _playedRight = false;
+            }
+            
         }
         
     }
@@ -153,8 +194,13 @@ public class CalculateDistance : MonoBehaviour
         if (minDirection == 2)
         {
            // Debug.Log("Coming from the left");
-            _arduinoVest.OnHapticsRight();
-            _right = true;
+            _arduinoVest.OnHapticsLeft();
+            _right = false;
+            _frontLeft = false;
+            _frontRight = false;
+            _backLeft = false;
+            _backRight = false;
+            _left = true;
 
         }
         //coming from the frontleft
@@ -163,6 +209,11 @@ public class CalculateDistance : MonoBehaviour
            // Debug.Log("Coming from the frontleft");
             _arduinoVest.OnHapticsFrontLeft();
             _frontLeft = true;
+            _right = true;
+            _frontRight = false;
+            _backLeft = false;
+            _backRight = false;
+            _left = false;
 
         }
         //coming from the frontright
@@ -171,7 +222,11 @@ public class CalculateDistance : MonoBehaviour
            // Debug.Log("Coming from the frontright");
             _arduinoVest.OnHapticsFrontright();
             _frontRight = true;
-
+            _right = false;
+            _frontLeft = false;
+            _backLeft = false;
+            _backRight = false;
+            _left = false;
         }
         //coming from the backleft
         if (minDirection == 4)
@@ -179,6 +234,11 @@ public class CalculateDistance : MonoBehaviour
            // Debug.Log("Coming from the backleft");
             _arduinoVest.OnHapticsBackLeft();
             _backLeft = true;
+            _right = false;
+            _frontLeft = false;
+            _frontRight = false;
+            _backRight = false;
+            _left = false;
         }
         //coming from the backright
         if (minDirection == 5)
@@ -186,7 +246,12 @@ public class CalculateDistance : MonoBehaviour
            // Debug.Log("Coming from the backright");
             _arduinoVest.OnHapticsBackRight();
             _backRight = true;
-          
+            _right = false;
+            _frontLeft = false;
+            _frontRight = false;
+            _backLeft = false;
+            _left = false;
+
         }
         //coming from the right
         if (minDirection == 3)
@@ -194,6 +259,11 @@ public class CalculateDistance : MonoBehaviour
             //Debug.Log("Coming from the right");
             _arduinoVest.OnHapticsRight();
             _right = true;
+            _frontLeft = false;
+            _frontRight = false;
+            _backLeft = false;
+            _backRight = false;
+            _left = false;
             
         }
     }

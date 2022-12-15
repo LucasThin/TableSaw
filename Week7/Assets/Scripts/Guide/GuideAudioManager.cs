@@ -10,7 +10,6 @@ public class GuideAudioManager : MonoBehaviour
     [SerializeField] private float _threshold = 1f;
     [SerializeField] private GuidePath _guidePath;
     [SerializeField] private GuideControllers _guideControllers;
-    [SerializeField] private CalculateDistance _calculateDistance;
     public List<AudioClip> _audioClips;
 
     private bool infront = false, left = false, right = false, behind = false;
@@ -24,7 +23,7 @@ public class GuideAudioManager : MonoBehaviour
         allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
     }
 
-    void StopAllAudio()
+    public void StopAllAudio()
     {
 
         foreach (var audios in allAudioSources)
@@ -49,74 +48,7 @@ public class GuideAudioManager : MonoBehaviour
                 _audioPlayed = true;
             }
         }
-        
-        //when someone is approaching from the front
-        if (_calculateDistance._frontLeft || _calculateDistance._frontRight)
-        {
-            if (!infront)
-            {
-                StopAllAudio();
-                SoundManager.Instance.PlayLine(_audioClips[5]);
-                Debug.Log("infront line");
-
-                infront = true;
-            }
-        }
-        else
-        {
-            infront = false;
-        }
-       
-        //when someone is approaching from the back
-        if (_calculateDistance._backLeft || _calculateDistance._backRight)
-        {
-            if (!behind)
-            {
-                StopAllAudio();
-                SoundManager.Instance.PlayLine(_audioClips[4]);
-                Debug.Log("behind line");
-
-                behind = true;
-            }
-        }
-        else
-        {
-            behind = false;
-        }
-        
-        //when someone is approaching from the left 
-        if (_calculateDistance._left)
-        {
-            if (!left)
-            {
-                StopAllAudio();
-                SoundManager.Instance.PlayLine(_audioClips[6]);
-                Debug.Log("left line");
-
-                left = true;
-            }
-        }
-        else
-        {
-            left = false;
-        }
-        
-        //when someone is approaching from the right 
-        if (_calculateDistance._right)
-        {
-            if (!left)
-            {
-                StopAllAudio();
-                SoundManager.Instance.PlayLine(_audioClips[7]);
-                Debug.Log("right line");
-
-                right = true;
-            }
-        }
-        else
-        {
-            right = false;
-        }
+      
     }
 
     public void AfterPickingUp()
