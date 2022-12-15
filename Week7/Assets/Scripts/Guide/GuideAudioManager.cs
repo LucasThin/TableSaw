@@ -28,5 +28,17 @@ public class GuideAudioManager : MonoBehaviour
                 _audioPlayed = true;
             }
         }
+       
+    }
+
+    public void AfterPickingUp()
+    {
+        if (_audioPlayed)
+        {
+            SoundManager.Instance.PlayLine(_audioClips[1]);
+            Debug.Log("afterboxpickup line");
+
+            _audioPlayed = false;
+        }
     }
 }

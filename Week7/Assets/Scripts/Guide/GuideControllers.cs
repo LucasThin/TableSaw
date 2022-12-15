@@ -173,6 +173,7 @@ public class GuideControllers : MonoBehaviour
 
     private void Waiting()
     {
+        _carrying = false;
         routingCalled = false;
         
         //pause the agent
@@ -182,6 +183,7 @@ public class GuideControllers : MonoBehaviour
 
     private void Guiding()
     {
+        _carrying = false;
         routingCalled = false;
         
         
