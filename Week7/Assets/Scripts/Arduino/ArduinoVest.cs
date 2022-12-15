@@ -13,7 +13,8 @@ public class ArduinoVest : MonoBehaviour
     private string byteValue;
 
     [SerializeField] private bool button = false;
-    [SerializeField] private ToggleUI _toggleUI;
+   // [SerializeField] private ToggleUI _toggleUI;
+   [SerializeField] private GameObject _guide;
     
     void Awake()
     {
@@ -36,12 +37,13 @@ public class ArduinoVest : MonoBehaviour
              if (value == "up")
              {
                  button = true;
-                 _toggleUI.ToggleUIOn();
+                 _guide.SetActive(false);
 
              }
              else if (value == "down")
              {
                  button = false;
+                 _guide.SetActive(true);
              }
          }
 

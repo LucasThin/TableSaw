@@ -15,7 +15,7 @@ public class GuideAudioManager : MonoBehaviour
     private bool infront = false, left = false, right = false, behind = false;
     private bool _audioPlayed = false;
     public bool _afterPickUp = false;
-    public bool _enterConveyerBelt = false;
+    public bool _enterConveyerBelt = false, _reachedDestination = false;
 
     private AudioSource[] allAudioSources;
     void Awake()
@@ -47,6 +47,11 @@ public class GuideAudioManager : MonoBehaviour
 
                 _audioPlayed = true;
             }
+        }
+
+        if (_guideControllers._reachedEnd)
+        {
+            ReachedDestination();
         }
       
     }
@@ -80,6 +85,19 @@ public class GuideAudioManager : MonoBehaviour
     {
         
         _enterConveyerBelt = false;
+    }
+
+    public void ReachedDestination()
+    {
+        if (!_reachedDestination)
+        {
+            StopAllAudio();
+            SoundManager.Instance.PlayLine(_audioClips[8]);
+            Debug.Log("Reached Destination");
+
+            _reachedDestination = true;
+
+        }
     }
     
 }

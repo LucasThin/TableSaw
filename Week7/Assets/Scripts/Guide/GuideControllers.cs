@@ -32,6 +32,7 @@ public class GuideControllers : MonoBehaviour
 
     public bool _carrying = false;
     public bool _guidingfirst = false;
+    public bool _reachedEnd = false;
     void Start()
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
@@ -141,6 +142,7 @@ public class GuideControllers : MonoBehaviour
     private void Ending()
     {
         agent.transform.LookAt(_camera);
+        _reachedEnd = false;
     }
 
     private void Dropping()
@@ -155,6 +157,9 @@ public class GuideControllers : MonoBehaviour
         
         //place box 
         _GuideBox.SetActive(false);
+
+        _reachedEnd = true;
+
 
     }
 
