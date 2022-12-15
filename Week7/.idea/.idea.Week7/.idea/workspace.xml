@@ -4,12 +4,7 @@
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene/NavMesh-Floor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene/NavMesh-Floor.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene/NavMesh-Floor.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene/NavMesh-Floor.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Guide/Greeting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Guide/Greeting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideControllers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +99,7 @@
       <workItem from="1670532673477" duration="8576000" />
       <workItem from="1671015832324" duration="6379000" />
       <workItem from="1671046431920" duration="3404000" />
-      <workItem from="1671061613826" duration="11595000" />
+      <workItem from="1671061613826" duration="13833000" />
     </task>
     <servers />
   </component>

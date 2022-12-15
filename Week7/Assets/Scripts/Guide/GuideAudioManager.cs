@@ -16,14 +16,32 @@ public class GuideAudioManager : MonoBehaviour
     private bool _audioPlayed = false;
     private bool _afterPickUp = false;
     public bool _enterConveyerBelt = false;
+
+    private AudioSource[] allAudioSources;
+    void Awake()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+    }
+
+    void StopAllAudio()
+    {
+
+        foreach (var audios in allAudioSources)
+        {
+            audios.Stop();
+        }
+
+    }
     
-    private void Update()
+
+    void Update()
     {
         //When agent is near the pick up point
         if (_guideControllers._carrying)
         {
             if (!_audioPlayed)
             {
+                StopAllAudio();
                 SoundManager.Instance.PlayLine(_audioClips[0]);
                 Debug.Log("play line");
 
@@ -37,6 +55,7 @@ public class GuideAudioManager : MonoBehaviour
     {
         if (!_afterPickUp)
         {
+            StopAllAudio();
             SoundManager.Instance.PlayLine(_audioClips[1]);
             Debug.Log("afterboxpickup line");
 
@@ -48,6 +67,7 @@ public class GuideAudioManager : MonoBehaviour
     {
         if (!_enterConveyerBelt)
         {
+            StopAllAudio();
             SoundManager.Instance.PlayLine(_audioClips[2]);
             Debug.Log("Enter Conveyer belt");
 
@@ -58,6 +78,8 @@ public class GuideAudioManager : MonoBehaviour
 
     public void ResetBelt()
     {
+        
         _enterConveyerBelt = false;
     }
+    
 }
