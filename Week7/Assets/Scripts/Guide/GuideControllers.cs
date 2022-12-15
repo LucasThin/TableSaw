@@ -28,6 +28,8 @@ public class GuideControllers : MonoBehaviour
     private float _debug;
     private bool routingCalled = false;
     private bool droppingCalled = false;
+
+    public bool _carrying = false;
     void Start()
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
@@ -39,9 +41,9 @@ public class GuideControllers : MonoBehaviour
     void Update()
     {
         _animator.SetFloat("Speed", agent.velocity.magnitude);
-        _debug = Vector3.Distance(transform.position, _currentPoint.position);
+        _debug = Vector3.Distance(agent.transform.position, _currentPoint.position);
         //---- check if avatar reaching point ----
-        if (Vector3.Distance(transform.position, _currentPoint.position) < _threshold)
+        if (Vector3.Distance(agent.transform.position, _currentPoint.position) < _threshold)
         {
             //move to the path position
             agent.Warp(_currentPoint.position);
@@ -152,6 +154,7 @@ public class GuideControllers : MonoBehaviour
 
     private void Carrying()
     {
+        _carrying = true;
         Debug.Log("Carrying");
         //Rotate towards the box
         agent.transform.rotation = _guidePath.pathPoints[0].rotation;
