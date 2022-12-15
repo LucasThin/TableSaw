@@ -9,11 +9,12 @@ TagManager:
   - PlayerBody
   - Forklift
   - BakeNavAgent
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - minimap
   - Water
   - UI
   - 
