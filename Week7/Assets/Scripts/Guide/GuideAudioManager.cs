@@ -11,7 +11,7 @@ public class GuideAudioManager : MonoBehaviour
     [SerializeField] private GuidePath _guidePath;
     [SerializeField] private GuideControllers _guideControllers;
     [SerializeField] private CalculateDistance _calculateDistance;
-    [SerializeField] private List<AudioClip> _audioClips;
+    public List<AudioClip> _audioClips;
 
     private bool infront = false, left = false, right = false, behind = false;
     private bool _audioPlayed = false;

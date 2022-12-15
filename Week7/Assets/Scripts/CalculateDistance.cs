@@ -17,6 +17,8 @@ public class CalculateDistance : MonoBehaviour
     [SerializeField] private GameObject normalPlayer;
     [SerializeField] private GameObject AlertLight;
     [SerializeField] private ArduinoVest _arduinoVest;
+    [SerializeField] private UIManager _uiManager;
+    [SerializeField] private GuideAudioManager _guideAudioManager;
     private int x = 0;
 
     private bool _removeList;
@@ -33,7 +35,7 @@ public class CalculateDistance : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerBody"))
         {
             //Update all distances between
             alertWorker.SetActive(true);
@@ -53,7 +55,7 @@ public class CalculateDistance : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerBody"))
         {
             //On Trigger enter, start calculating the distance function
             CalculatingDistance();
@@ -96,6 +98,12 @@ public class CalculateDistance : MonoBehaviour
             }
 
             _removeList = false;
+        }
+
+        if (_frontLeft || _backLeft )
+        {
+            _uiManager.moveLeftOn();
+            _uiManager.moveLeftOff();
         }
     }
     

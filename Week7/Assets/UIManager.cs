@@ -22,7 +22,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GuideControllers _guideControllers;
     [SerializeField] private Greeting _greeting;
     [SerializeField] private GuideAudioManager _guideAudioManager;
-    [SerializeField] private CalculateDistance _calculateDistance;
     private void Start()
     {
         userIDOff();
@@ -63,17 +62,7 @@ public class UIManager : MonoBehaviour
             currentDropoffOn();
         }
 
-        if (_calculateDistance._frontLeft || _calculateDistance._backLeft || _calculateDistance._left)
-        {
-            moveRightOn();
-            moveLeftOff();
-        }
-
-        if (_calculateDistance._frontRight || _calculateDistance._backRight || _calculateDistance._right)
-        {
-            moveLeftOn();
-            moveLeftOff();
-        }
+       
     }
 
     public void timePanelOn()
