@@ -3,8 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Blue_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Characters/Blue_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Default_hair.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Characters/Default_hair.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Green_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Characters/Green_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Orange_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Characters/Orange_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters/Red_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Characters/Red_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_default_anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_default_anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_fist_anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_fist_anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_pinch_anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_pinch_anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_default_anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_default_anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_fist_anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_fist_anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_pinch_anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_pinch_anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Models.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Models/l_hand_skeletal_lowres.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Models/l_hand_skeletal_lowres.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Models/r_hand_skeletal_lowres.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/CustomHands/Models/r_hand_skeletal_lowres.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Worker_Obstacles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Worker_Obstacles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +32,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BackgroundMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GetPlayerPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimateOnInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arduino/Arduino2Unity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/PlaySoundOnStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,7 +121,7 @@
       <workItem from="1671015832324" duration="6379000" />
       <workItem from="1671046431920" duration="3404000" />
       <workItem from="1671061613826" duration="23802000" />
-      <workItem from="1671130912175" duration="1315000" />
+      <workItem from="1671130912175" duration="2430000" />
     </task>
     <servers />
   </component>

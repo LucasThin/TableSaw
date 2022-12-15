@@ -1921,7 +1921,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e09d4c1197ea99e488befaddb7d0bb45, type: 2}
+  - {fileID: 2100000, guid: 94d2202558f72b4408c9d9b3b5694eea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2442,7 +2442,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3433c80be4a72a949b9bfd9ab4d90fe9, type: 2}
+  - {fileID: 2100000, guid: 94d2202558f72b4408c9d9b3b5694eea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3647,6 +3647,12 @@ MonoBehaviour:
   _hapticSensors: {fileID: 0}
   _haptics: []
   distances: []
+  _frontLeft: 0
+  _frontRight: 0
+  _left: 0
+  _right: 0
+  _backLeft: 0
+  _backRight: 0
   alertWorker: {fileID: 4453741598445425177}
   normalWorker: {fileID: 4453741599419969542}
   Guide: {fileID: 4453741600059175607}
