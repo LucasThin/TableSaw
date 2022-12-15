@@ -31,12 +31,13 @@ public class GuideControllers : MonoBehaviour
     private bool droppingCalled = false;
 
     public bool _carrying = false;
+    public bool _guidingfirst = false;
     void Start()
     {
         _currentPoint = _guidePath.pathPoints[_pathIndex];
         _animator.SetBool("Carrying",false);
         _GuideBox.SetActive(false);
-        
+        _guidingfirst = true;
     }
 
     // Update is called once per frame
@@ -188,6 +189,7 @@ public class GuideControllers : MonoBehaviour
 
     private void Guiding()
     {
+        _guidingfirst = false;
         _carrying = false;
         routingCalled = false;
         

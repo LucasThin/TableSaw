@@ -8,6 +8,7 @@ public class CalculateDistance : MonoBehaviour
     public HapticSensors _hapticSensors;
     [SerializeField] private List<Transform> _haptics = new List<Transform>();
     public List<float> distances = new List<float>();
+    public bool _frontLeft, _frontRight, _left, _right, _backLeft, _backRight;
 
     [SerializeField] private GameObject alertWorker;
     [SerializeField] private GameObject normalWorker;
@@ -116,40 +117,49 @@ public class CalculateDistance : MonoBehaviour
         //coming from the left
         if (minDirection == 2)
         {
-            Debug.Log("Coming from the left");
+           // Debug.Log("Coming from the left");
             _arduinoVest.OnHapticsRight();
+            _right = true;
+
         }
         //coming from the frontleft
         if (minDirection == 0)
         {
-            Debug.Log("Coming from the frontleft");
+           // Debug.Log("Coming from the frontleft");
             _arduinoVest.OnHapticsFrontLeft();
+            _frontLeft = true;
 
         }
         //coming from the frontright
         if (minDirection == 1)
         {
-            Debug.Log("Coming from the frontright");
+           // Debug.Log("Coming from the frontright");
             _arduinoVest.OnHapticsFrontright();
+            _frontRight = true;
 
         }
         //coming from the backleft
         if (minDirection == 4)
         {
-            Debug.Log("Coming from the backleft");
+           // Debug.Log("Coming from the backleft");
             _arduinoVest.OnHapticsBackLeft();
+            _backLeft = true;
         }
         //coming from the backright
         if (minDirection == 5)
         {
-            Debug.Log("Coming from the backright");
+           // Debug.Log("Coming from the backright");
             _arduinoVest.OnHapticsBackRight();
+            _backRight = true;
+          
         }
         //coming from the right
         if (minDirection == 3)
         {
-            Debug.Log("Coming from the right");
+            //Debug.Log("Coming from the right");
             _arduinoVest.OnHapticsRight();
+            _right = true;
+            
         }
     }
 
