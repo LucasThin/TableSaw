@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Week7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainFactoryScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimateOnInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimateOnInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoVest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arduino/ArduinoVest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CalculateDistance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideAudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Guide/GuideControllers.cs" afterDir="false" />
-    </list>
+    <list default="true" id="16469f4a-569d-4915-9cb8-80152e8e675f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +103,7 @@
       <workItem from="1671061613826" duration="23802000" />
       <workItem from="1671130912175" duration="2430000" />
       <workItem from="1671138237453" duration="5907000" />
-      <workItem from="1671147984828" duration="358000" />
+      <workItem from="1671147984828" duration="1012000" />
     </task>
     <servers />
   </component>
